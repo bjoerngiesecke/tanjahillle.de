@@ -1,3 +1,18 @@
 body {
-    font-family: sans-serif;
+    font-family: sans-serif;  
+    margin: 2%;  
   }
+
+.title {
+    font-size: 5em;
+    text-align: center;
+    padding: 2% 0 0% 0;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 3em;
+    font-family: serif;
+    text-align: center;
+    padding: 0% 10% 2% 10%;
+}
