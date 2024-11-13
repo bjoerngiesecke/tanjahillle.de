@@ -8,10 +8,34 @@ body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #bbb;
     color: black;
-    font-size: 2.4em;
+    font-size: 2.2em;
     /* letter-spacing: 0.08rem; */
     /* word-spacing: 10%; */
     margin-top: 8%;
+}
+
+.title {
+  font-family: forma-djr-display, sans-serif;
+  font-size: 4em;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: 800;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 0% 10% 2% 10%;
+}
+
+section {
+  background-color: #fefefe;
+  margin: 0% 2% 0.5% 2%;
+  padding: 2% 10% 2% 10%;
+  border-radius: 20px 20px 20px 20px;
 }
 
   .fixed-nav {
@@ -40,7 +64,7 @@ body {
   .fixed-nav a:hover {
     background-color: #fefefe;
     color: blue;
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3); /* Drop shadow on hover */
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.8); /* Drop shadow on hover */
 }
 
 /* Zeitliche Staffelung der Animation für jedes Navigationselement */
@@ -73,30 +97,6 @@ body {
       transform: translateY(0); /* Endpunkt auf Ausgangshöhe */
     }
   }
-
-.title {
-    font-family: forma-djr-display, sans-serif;
-    font-size: 4em;
-    font-weight: 800;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.subtitle {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 800;
-    font-size: 1.2em;
-    letter-spacing: 0.05em;
-    text-align: center;
-    padding: 0% 10% 2% 10%;
-}
-
-section {
-    background-color: #fefefe;
-    margin: 0% 2% 0.5% 2%;
-    padding: 2% 10% 2% 10%;
-    border-radius: 20px 20px 20px 20px;
-}
 
 a, a:active, a:visited {
   color: blue;
