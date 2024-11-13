@@ -5,17 +5,18 @@
 }
 
 body {
-    font-family: forma-djr-display, sans-serif;
-    background-color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #bbb;
     color: black;
-    font-size: 2em;
-    letter-spacing: 0.08rem;
-    word-spacing: 10%;
+    font-size: 2.4em;
+    /* letter-spacing: 0.08rem; */
+    /* word-spacing: 10%; */
+    margin-top: 8%;
 }
 
   .fixed-nav {
     position: fixed;
-    top: 0;
+    top: 1%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -30,7 +31,7 @@ body {
     background-color: white;
     padding: 10px 20px;
     border-radius: 30px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
     opacity: 0; /* Für die Animation auf 0 setzen */
     transform: translateY(20px); /* Startpunkt leicht unterhalb */
     animation: fadeInUp 0.6s ease forwards; /* Animation für den Aufwärts- und Fade-Effekt */
@@ -73,9 +74,7 @@ body {
     }
   }
 
-
 .title {
-    margin-top: 6%;
     font-family: forma-djr-display, sans-serif;
     font-size: 4em;
     font-weight: 800;
@@ -85,14 +84,21 @@ body {
 
 .subtitle {
     font-family: forma-djr-display, sans-serif;
+    font-weight: 800;
     font-size: 1.2em;
+    letter-spacing: 0.05em;
     text-align: center;
-    /* padding: 0% 10% 2% 10%; */
+    padding: 0% 10% 2% 10%;
 }
 
 section {
-    background-color: grey;
+    background-color: #fefefe;
     margin: 0% 2% 0.5% 2%;
     padding: 2% 10% 2% 10%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+a, a:active, a:visited {
+  color: blue;
+  text-decoration: none;
 }
