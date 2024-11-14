@@ -41,7 +41,7 @@
     </section>
 
     <section id="zweiraeume">
-      <div class="section-title">Die zwei Räume einer <br>co-agilen Organisation</div>
+      <h2>Die zwei Räume einer <br>co-agilen Organisation</h2>
       <div class="zitat">
         &bdquo;Die 2-Raum-Kompetenz beschreibt die Fähigkeit, sich sicher durch beide Räume – den klassischen und den agilen – einer co-agilen Organisation zu bewegen und dabei ihren Eigenlogiken, Abgrenzungen und Verbindungen zu berücksichtigen.&ldquo;
       </div>
@@ -54,7 +54,7 @@
     </p>
 
     <section id="buch">
-      <div class="section-title">Das Buch co-agile Organisationsentwicklung <br>bietet</div>
+      <h2>Das Buch co-agile Organisationsentwicklung <br>bietet</h2>
 
       <ul class="section-text">
           <li>ein Meta-Framework, das die klassische und agile Arbeitswelt gezielt miteinander verbindet – die Co-Agilität</li>
@@ -66,26 +66,34 @@
       </section>
 
       <section id="angebot">
-        <div class="section-title">Unsere Angebote</div>
-  
-        <ul class="section-text">
-          <li>Organisationsentwicklung <br>
-            Wir begleiten Transformationsprozesse in Organisationen ganzheitlich und mit einem strategischen Blick. Nicht alles, was agil und neu ist passt zu euch, aber die rein klassischen Managementmethoden kommen auch an ihre Grenzen? Wir entwickeln mit euch ein passendes Vorgehen und bringen Struktur sowie Bedürfnisorientierung in eure Organisationsentwicklung.
-          </li>
-          <li>Führungskräfte- und Teamentwicklung <br>
-            Wir unterstützen die Entwicklung von Führungskräften in ihren Rollen und Kompetenzen sowie Teams in ihrer Zusammenarbeit. Damit sie in einem komplexer werdenden Arbeitsumfeld verantwortungsbewusst und wirksam handeln können. Mit unserem großen Methodenkoffer setzten wir an euren aktuellen Herausforderungen und Bedarfen an.
-          </li>
-          <li>Interaktive Impulsvorträge <br>
-            Rund um die Themen im Buch können wir interaktive Impulsvorträge für unterschiedliche Kontexte anbieten. Zum Beispiel zu Neuem Arbeiten, Gestaltung von Transformationsprozessen, partizipativem und bedürfnisorientiertem Wandel sowie natürlich Co-Agilität.
-          </li>
-          <li>Individuelle Workshopformate <br>
-            Es gibt bereits einen Workshoprahmen, in den Co-Agilität als Thema gut passen würde oder die Themen rund um co-agile Organisationsentwicklung ist für Deine Organisation relevant, aber es ist noch nicht klar, wie das Thema  am besten anzugehen ist? Gemeinsam entwickeln wir ein individuell passendes Format.
-          </li>
-        </ul>
+        <h2>Unsere Angebote</h2>
+
+        <div class="accordion-container">
+          <button class="accordion">Organisationsentwicklung <br/>
+          </button>
+          <div class="panel">
+            <p>Wir begleiten Transformationsprozesse in Organisationen ganzheitlich und mit einem strategischen Blick. Nicht alles, was agil und neu ist passt zu euch, aber die rein klassischen Managementmethoden kommen auch an ihre Grenzen? Wir entwickeln mit euch ein passendes Vorgehen und bringen Struktur sowie Bedürfnisorientierung in eure Organisationsentwicklung.</p>
+          </div>
+          
+          <button class="accordion">Führungskräfte- und Teamentwicklung</button>
+          <div class="panel">
+            <p>Wir unterstützen die Entwicklung von Führungskräften in ihren Rollen und Kompetenzen sowie Teams in ihrer Zusammenarbeit. Damit sie in einem komplexer werdenden Arbeitsumfeld verantwortungsbewusst und wirksam handeln können. Mit unserem großen Methodenkoffer setzten wir an euren aktuellen Herausforderungen und Bedarfen an.</p>
+          </div>
+          
+          <button class="accordion">Interaktive Impulsvorträge</button>
+          <div class="panel">
+            <p>Rund um die Themen im Buch können wir interaktive Impulsvorträge für unterschiedliche Kontexte anbieten. Zum Beispiel zu Neuem Arbeiten, Gestaltung von Transformationsprozessen, partizipativem und bedürfnisorientiertem Wandel sowie natürlich Co-Agilität.</p>
+          </div>
+          
+          <button class="accordion">Individuelle Workshopformate</button>
+          <div class="panel">
+            <p>Es gibt bereits einen Workshoprahmen, in den Co-Agilität als Thema gut passen würde oder die Themen rund um co-agile Organisationsentwicklung ist für Deine Organisation relevant, aber es ist noch nicht klar, wie das Thema am besten anzugehen ist? Gemeinsam entwickeln wir ein individuell passendes Format.</p>
+          </div>
+        </div>
       </section>
 
     <section id="about">
-       <div class="section-title">Über uns</div>
+       <h2>Über uns</h2>
        <div class="section-text">
           <p>
             Stephanie Sievers und Tanja Hille sind als Organisationsberaterinnen und Transformationsbegleiterinnen selbstständig tätig. Sie arbeiten überwiegend mit gemeinwohlorientierten Organisationen zusammen, wie zum Beispiel mit öffentlichen Verwaltungen, Wohlfahrtsorganisationen, Verbänden, Unfall- und Krankenkassen, Hochrisikoorganisationen, Stiftungen, Vereinen und weiteren. Dafür vereinen sie ihre Hintergründe und Fähigkeiten. 
@@ -114,6 +122,17 @@
       <section class="section-text">
         Impressum
       </section>
+
+      <script>
+        const acc = document.querySelectorAll(".accordion");
+        acc.forEach(button => {
+          button.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+          });
+        });
+      </script>
 
   </body>
 </html>

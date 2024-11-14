@@ -45,7 +45,7 @@ section {
   padding-right: 22%;
 }
 
-.section-title {
+h2 {
   font-family: forma-djr-display, sans-serif;
   font-weight: 400;
   font-size: 2.5em;
@@ -87,6 +87,72 @@ section {
   font-style: italic;
   text-align: center;
   padding: 0% 18% 0% 18%;
+}
+
+/* – – – – Akkordeon – – – – */
+
+button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100%;
+}
+
+button::before {
+  content: "";
+  display: inline-block;
+  width: 10px; /* Size of the disc */
+  height: 10px;
+  margin-right: 14px; /* Space between disc and button text */
+  background-color: black; /* Color of the disc */
+  border-radius: 50%; /* Makes it a circle */
+  vertical-align: middle; /* Aligns it with the button text */
+  margin-bottom: 3px;
+}
+
+/* Center container with flexbox */
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Adjusted accordion styling */
+.accordion {
+  background-color: #fff;
+  cursor: pointer;
+  width: 60%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color, border-radius 0.2s ease;
+  border-radius: 0px 0px 0px 0px;
+  padding: .5% .5% .5% 20px;
+  margin-bottom: 5px;
+}
+
+.accordion:hover {
+  background-color: #eee;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.accordion.active {
+  background-color: #eee;
+  margin-bottom: 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.panel {
+  width: 60%;
+  display: none;
+  overflow: hidden;
+  margin: 0 auto; /* Center the panel */
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.panel p {
+  margin: 20px;
 }
 
 /* – – – – Tanja Stephie Images START – – – – */
