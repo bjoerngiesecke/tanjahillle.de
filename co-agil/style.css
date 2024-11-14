@@ -89,13 +89,32 @@ section {
   padding: 0% 18% 0% 18%;
 }
 
-.about-img {
-  width: 33%;
-  border-radius: 1em;
-  display: block;
-  margin: 0 auto;
-  margin-top: 2em;
+/* – – – – Tanja Stephie Images START – – – – */
+
+.image-container {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between images */
 }
+
+.image-container img {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  max-width: 300px; /* Adjust as needed for responsive scaling */
+  border-radius: 15px; /* Adjust border-radius as needed */
+  object-fit: cover;
+}
+
+/* For responsive layout */
+@media (max-width: 600px) {
+  .image-container {
+    flex-direction: column;
+  }
+}
+
+/* – – – – Navigation – – – – */
 
   .fixed-nav {
     font-family: forma-djr-display, sans-serif;
