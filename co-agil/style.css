@@ -75,7 +75,7 @@ section {
   background-color: #ebebeb;
 }
 
-#contact {
+#angebot {
   background-color: blanchedalmond;
 }
 
@@ -98,6 +98,9 @@ section {
 }
 
   .fixed-nav {
+    font-family: forma-djr-display, sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
     position: fixed;
     top: 1%;
     width: 100%;
