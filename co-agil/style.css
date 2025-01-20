@@ -248,6 +248,14 @@ button::before {
   padding: 20px;
   border-radius: 20px;
   text-align: left;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.container-klassisch.slide-in-left {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .container-agil {
@@ -255,6 +263,14 @@ button::before {
   padding: 20px;
   border-radius: 20px;
   text-align: left;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.container-agil.slide-in-right {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .headline {

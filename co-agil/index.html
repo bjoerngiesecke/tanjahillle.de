@@ -62,80 +62,67 @@
 
 <!-- Zwei Räume -->
 
-    <section id="zweiraeume">
-      <h2>Die zwei Räume einer <br>co-agilen Organisation</h2>
+<section id="zweiraeume">
+  <h2>Die zwei Räume einer <br>co-agilen Organisation</h2>
 
-    <div class="raum-container">
-    <div class="container-klassisch">
-      <div class="headline">DER KLASSISCHE RAUM</div>
-      
-      <div class="section">
-          <h4>Werte</h4>
-          <p>Vollständigkeit, Richtigkeit, Planbarkeit, Ordnung, Stabilität, Sicherheit</p>
+  <div class="raum-container">
+      <div class="container-klassisch">
+          <div class="headline">DER KLASSISCHE RAUM</div>
+          <div class="section">
+              <h4>Werte</h4>
+              <p>Vollständigkeit, Richtigkeit, Planbarkeit, Ordnung, Stabilität, Sicherheit</p>
+          </div>
+          <div class="section">
+              <h4>Mindset</h4>
+              <p>sicherheits- und stabilitätsorientiert</p>
+          </div>
+          <div class="section">
+              <h4>Führung & Zusammenarbeit</h4>
+              <p>vertikale Hierarchie, Stellen und Positionen</p>
+          </div>
+          <div class="section">
+              <h4>Projektarchitektur</h4>
+              <p>Wasserfall in aufeinanderfolgenden abgeschlossenen Phasen</p>
+          </div>
+          <div class="section">
+              <h4>Struktur</h4>
+              <p>pyramidal</p>
+          </div>
+          <div class="section">
+              <h4>Typische Meetings</h4>
+              <p>Informations- und Berichtstermine, Jour fixes und Entscheidungstermine</p>
+          </div>
       </div>
-      
-      <div class="section">
-          <h4>Mindset</h4>
-          <p>sicherheits- und stabilitätsorientiert</p>
-      </div>
-      
-      <div class="section">
-          <h4>Führung & Zusammenarbeit</h4>
-          <p>vertikale Hierarchie, Stellen und Positionen</p>
-      </div>
-      
-      <div class="section">
-          <h4>Projektarchitektur</h4>
-          <p>Wasserfall in aufeinanderfolgenden abgeschlossenen Phasen</p>
-      </div>
-      
-      <div class="section">
-          <h4>Struktur</h4>
-          <p>pyramidal</p>
-      </div>
-      
-      <div class="section">
-          <h4>Typische Meetings</h4>
-          <p>Informations- und Berichtstermine, Jour fixes und Entscheidungstermine</p>
+
+      <div class="container-agil">
+          <div class="headline">DER AGILE RAUM</div>
+          <div class="section">
+              <h4>Werte</h4>
+              <p>Commitment, Offenheit, Mut, Einfachheit, Fokus</p>
+          </div>
+          <div class="section">
+              <h4>Mindset</h4>
+              <p>veränderungs- und lernorientiert</p>
+          </div>
+          <div class="section">
+              <h4>Führung & Zusammenarbeit</h4>
+              <p>geteilte Führung, horizontale Hierarchie und Rollen</p>
+          </div>
+          <div class="section">
+              <h4>Projektarchitektur</h4>
+              <p>iteratives und inkrementelles Vorgehen in sich wiederholenden Zyklen</p>
+          </div>
+          <div class="section">
+              <h4>Struktur</h4>
+              <p>netzwerkartig</p>
+          </div>
+          <div class="section">
+              <h4>Typische Meetings</h4>
+              <p>Planning, Review, Retrospektive, Daily Stand-ups</p>
+          </div>
       </div>
   </div>
-
-  <!-- Der agile Raum -->
-
-    <div class="container-agil">
-      <div class="headline">DER AGILE RAUM</div>
-      
-      <div class="section">
-          <h4>Werte</h4>
-          <p>Commitment, Offenheit, Mut, Einfachheit, Fokus</p>
-      </div>
-      
-      <div class="section">
-          <h4>Mindset</h4>
-          <p>veränderungs- und lernorientiert</p>
-      </div>
-      
-      <div class="section">
-          <h4>Führung & Zusammenarbeit</h4>
-          <p>geteilte Führung, horizontale Hierarchie und Rollen</p>
-      </div>
-      
-      <div class="section">
-          <h4>Projektarchitektur</h4>
-          <p>iteratives und inkrementelles Vorgehen in sich wiederholenden Zyklen</p>
-      </div>
-      
-      <div class="section">
-          <h4>Struktur</h4>
-          <p>netzwerkartig</p>
-      </div>
-      
-      <div class="section">
-          <h4>Typische Meetings</h4>
-          <p>Planning, Review, Retrospektive, Daily Stand-ups</p>
-      </div>
-    </div>
-  </div>
+</section>
 
   <div class="zitat">
     &bdquo;Die 2-Raum-Kompetenz beschreibt die Fähigkeit, sich sicher durch beide Räume einer co-agilen Organisation zu bewegen und dabei ihren Eigenlogiken, Abgrenzungen und Verbindungen zu berücksichtigen.&ldquo;
@@ -235,6 +222,34 @@
       
           window.addEventListener('scroll', onScroll);
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const klassisch = document.querySelector('.container-klassisch');
+    const agil = document.querySelector('.container-agil');
+
+    function checkScroll() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+        const triggerTop = window.innerHeight / 5;
+
+        const klassischTop = klassisch.getBoundingClientRect().top;
+        const agilTop = agil.getBoundingClientRect().top;
+
+        if (klassischTop < triggerBottom && klassischTop > triggerTop) {
+            klassisch.classList.add('slide-in-left');
+        } else {
+            klassisch.classList.remove('slide-in-left');
+        }
+
+        if (agilTop < triggerBottom && agilTop > triggerTop) {
+            agil.classList.add('slide-in-right');
+        } else {
+            agil.classList.remove('slide-in-right');
+        }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Initial check in case elements are already in view
+    });
       </script>
 
   </body>
