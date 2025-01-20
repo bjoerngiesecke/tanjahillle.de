@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    color: black;
+    color: #2E294E;
     font-size: 1.6em;
     /* letter-spacing: 0.08rem; */
     /* word-spacing: 10%; */
@@ -15,7 +15,7 @@ body {
 
 .title {
   font-family: forma-djr-display, sans-serif;
-  color: white;
+  color: #2E294E;
   font-size: 5em;
   font-weight: 800;
   text-align: center;
@@ -25,7 +25,7 @@ body {
 
 .subtitle {
   font-family: forma-djr-display, sans-serif;
-  color: #000;
+  color: #2E294E;
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.1em;
@@ -53,6 +53,7 @@ section {
 
 h2 {
   font-family: forma-djr-display, sans-serif;
+  color: white;
   font-weight: 400;
   font-size: 2.5em;
   line-height: 1em;
@@ -62,32 +63,36 @@ h2 {
 }
 
 #home {
-  background-color: #0052ff;
+  background-color: #E9E1FB;
   padding-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #intro {
-  background-color: #ebebeb;
+  background-color: #E9E1FB;
 }
 
 #zweiraeume {
-  background-color: #7b68ee;
+  background-color: #2A0E69;
 }
 
 #buch {
-  background-color: #b79773;
+  background-color: #FCE2DB;
 }
 
 #about {
-  background-color: #ebebeb;
+  background-color: #FCE2DB;
 }
 
 #angebot {
-  background-color: blanchedalmond;
+  background-color: #E9E1FB;
 }
 
 #links {
-  background-color: #ff0;
+  background-color: #D83A15;
 }
 
 .zitat {
@@ -122,20 +127,23 @@ button::before {
   justify-content: center;
   align-items: center;
   width: 100%;
+  list-style-type: none; /* Remove list symbols */
+  padding: 0;
 }
 
 /* Adjusted accordion styling */
 .accordion {
-  background-color: #fff;
+  background-color: #2A0E69;
+  color: #2A0E69;
   cursor: pointer;
   width: 60%;
   text-align: left;
   border: none;
   outline: none;
   transition: background-color, border-radius 0.2s ease;
-  border-radius: 0px 0px 0px 0px;
-  padding: .5% .5% .5% 20px;
-  margin-bottom: 5px;
+  border-radius: 12px; /* Rounded corners */
+  padding: 18px;
+  margin-bottom: 10px; /* Space between buttons */
 }
 
 .accordion:hover {
@@ -154,12 +162,15 @@ button::before {
   display: none;
   overflow: hidden;
   margin: 0 auto; /* Center the panel */
-  background-color: white;
-  margin-bottom: 5px;
+  background-color: #2A0E69;
+  color: white;
+  margin-bottom: 10px; /* Space between panels */
+  border-radius: 12px; /* Rounded corners */
+  padding: 0 18px;
 }
 
 .panel p {
-  margin: 20px;
+  margin: 15px 0; /* Adjust paragraph margin */
 }
 
 /* – – – – Tanja Stephie Images START – – – – */
@@ -259,7 +270,7 @@ button::before {
 }
 
 .container-agil {
-  background-color: lightsalmon;
+  background-color: #FCE2DB;
   padding: 20px;
   border-radius: 20px;
   text-align: left;
@@ -351,6 +362,31 @@ button::before {
 
 .fixed-nav .nav-link.active {
   color: blue; /* Change to your desired highlight color */
+}
+
+.buch-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.buch-info img {
+    margin-right: 80px; /* Add margin to the right of the image */
+}
+
+@media (min-width: 768px) {
+    #home {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .buch-info {
+        margin-top: 0;
+        margin-left: 20px;
+    }
 }
 
 /* a, a:active, a:visited {
