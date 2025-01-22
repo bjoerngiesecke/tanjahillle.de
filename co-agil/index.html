@@ -17,24 +17,25 @@
       <a href="#about" class="about nav-link">Über uns</a>
     </nav>
 
+    <!-- 2 fr titel 1 fr buch und ales mittig platziert -->
     <section id="home">
-    <div>
-        <div class="subtitle">
-            <span>Tanja Hille</span> & 
-            <span>Stephanie Sievers</span>
+    <div class="home-container">
+        <div class="home-text">
+            <div class="subtitle">
+                <span>Tanja Hille</span> & 
+                <span>Stephanie Sievers</span>
+            </div>
+            <div class="title">
+                CO-Agilität
+            </div>
+            <div class="subtitle section-text">
+                Ein Meta-Framework, dass die Stärken der Agilität mit klassischen Organisationswelten verbindet.
+            </div>
         </div>
-        <div class="title">
-            CO-Agilität
+        <div class="buch-info">
+            <img src="img/Buchtitel.webp" width="300px" alt="Buchcover">
+            <a href="https://bit.ly/4fqhr77" class="links">Buch vorbestellen</a>
         </div>
-        <div class="subtitle section-text">
-            Ein Meta-Framework, dass die Stärken der Agilität mit klassischen Organisationswelten verbindet.
-        </div>
-    </div>
-    <div class="buch-info">
-        <img src="img/Buchtitel.webp" width="300px" alt="Buchcover">
-        <p>
-            <a href="https://bit.ly/4fqhr77">Buch vorbestellen</a>
-        </p>
     </div>
 </section>
 
@@ -55,11 +56,11 @@
   <h2 class="buch-title">Das Buch co-agile Organisationsentwicklung</h2>
 
   <ul class="section-text">
-      <li class="fly-in">ermöglicht die gezielte und wirkungsvolle Verbindung von klassischen und agilen Arbeitswelten.</li>
-      <li class="fly-in">bietet einen systematischen Überblick agiler Prinzipien und Praktiken in der neuen Arbeitswelt.</li>
-      <li class="fly-in">illustriert eine Transformationsarchitektur, die die Bedürfnisse der Mitarbeitenden und die Vision der Organisation ausgleichend vereint.</li>
-      <li class="fly-in">beschreibt eine Organisationskultur, in der ständiges Lernen und Anpassungsfähigkeit möglich werden.</li>
-      <li class="fly-in">beinhaltet ein Fallbeispiel, an dem die Co-Agilität in der Praxis veranschaulicht wird.</li>
+      <li class="fly-in">ermöglicht die gezielte und wirkungsvolle Verbindung von klassischen und agilen Arbeitswelten</li>
+      <li class="fly-in">bietet einen systematischen Überblick agiler Prinzipien und Praktiken in der neuen Arbeitswelt</li>
+      <li class="fly-in">illustriert eine Transformationsarchitektur, die die Bedürfnisse der Mitarbeitenden und die Vision der Organisation ausgleichend vereint</li>
+      <li class="fly-in">beschreibt eine Organisationskultur, in der ständiges Lernen und Anpassungsfähigkeit möglich werden</li>
+      <li class="fly-in">beinhaltet ein Fallbeispiel, an dem die Co-Agilität in der Praxis veranschaulicht wird</li>
   </ul>
 </section>
 
@@ -70,7 +71,7 @@
 
   <div class="raum-container">
       <div class="container-klassisch">
-          <div class="headline">DER KLASSISCHE RAUM</div>
+          <div class="headline">Der klassische Raum</div>
           <div class="section">
               <h4>Werte</h4>
               <p>Vollständigkeit, Richtigkeit, Planbarkeit, Ordnung, Stabilität, Sicherheit</p>
@@ -98,7 +99,7 @@
       </div>
 
       <div class="container-agil">
-          <div class="headline">DER AGILE RAUM</div>
+          <div class="headline">Der agile Raum</div>
           <div class="section">
               <h4>Werte</h4>
               <p>Commitment, Offenheit, Mut, Einfachheit, Fokus</p>
@@ -186,7 +187,7 @@
 
       <section class="imprint">
         Co-Agile Organisationsentwicklung, Tanja Hille & Stephanie Sievers, 2025<br>
-        <a href="#" class="link-easy">Impressum</a>
+        <a href="/imprint.html" class="link-easy">Impressum</a>
       </section>
 
       <script>
@@ -229,8 +230,8 @@
     const agil = document.querySelector('.container-agil');
 
     function checkScroll() {
-        const triggerBottom = window.innerHeight / 5 * 4;
-        const triggerTop = window.innerHeight / 5;
+        const triggerBottom = window.innerHeight / 5 * 5; // Increase the bottom trigger point
+        const triggerTop = window.innerHeight / 5 * 0.5; // Decrease the top trigger point
 
         const klassischTop = klassisch.getBoundingClientRect().top;
         const agilTop = agil.getBoundingClientRect().top;

@@ -35,7 +35,7 @@ body {
 
 section {
   padding-top: 4%;
-  padding-bottom: 11%;
+  padding-bottom: 8%;
 }
 
 .section-text {
@@ -69,6 +69,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-bottom: 0% !important;
 }
 
 #intro {
@@ -77,6 +78,7 @@ h2 {
 
 #zweiraeume {
   background-color: #2A0E69;
+  padding-bottom: 4% !important;
 }
 
 #buch {
@@ -98,12 +100,10 @@ h2 {
 .zitat {
   font-style: italic;
   text-align: center;
-  padding: 4% 18% 0% 18%;
+  padding: 0% 18% 8% 18%;
   background-color: #2A0E69;
   color: white;
-  padding: 20px; /* Optional: Add some padding for better spacing */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  text-align: center; /* Optional: Center the text */
+  text-align: center;
 }
 
 /* – – – – Akkordeon – – – – */
@@ -114,13 +114,13 @@ button {
 }
 
 button::before {
-  content: "";
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
   display: inline-block;
-  width: 10px; /* Size of the disc */
-  height: 10px;
+  /* width: 20px;
+  height: 20px; */
   margin-right: 14px; /* Space between disc and button text */
-  background-color: black; /* Color of the disc */
-  border-radius: 50%; /* Makes it a circle */
+  color: red;
+  /* border-radius: 50%; */
   vertical-align: middle; /* Aligns it with the button text */
   margin-bottom: 3px;
 }
@@ -132,7 +132,6 @@ button::before {
   justify-content: center;
   align-items: center;
   width: 100%;
-  list-style-type: none; /* Remove list symbols */
   padding: 0;
 }
 
@@ -149,7 +148,6 @@ button::before {
   border-radius: 12px; /* Rounded corners */
   padding: 18px;
   margin-bottom: 10px; /* Space between buttons */
-  list-style: none;
 }
 
 .accordion:hover {
@@ -257,7 +255,7 @@ button::before {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-size: .5em;
+  font-size: 0.8em;
 }
 
 .container-klassisch {
@@ -292,9 +290,11 @@ button::before {
 
 .headline {
   text-align: center;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 1.6em;
   margin-bottom: 20px;
+  font-family: forma-djr-display, sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .section {
@@ -305,7 +305,7 @@ button::before {
 
   .fixed-nav {
     font-family: forma-djr-display, sans-serif;
-    font-size: 0.8em;
+    font-size: 1.5vw;
     letter-spacing: 0.05em;
     position: fixed;
     top: 1%;
@@ -330,8 +330,8 @@ button::before {
   }
   
   .fixed-nav a:hover {
-    background-color: #fefefe;
-    color: #541CD2;
+    color: #fefefe;
+    background-color: #541CD2;
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.8); /* Drop shadow on hover */
 }
 
@@ -367,43 +367,26 @@ button::before {
   }
 
 .fixed-nav .nav-link.active {
-  color: #541CD2; /* Change to your desired highlight color */
+  color: white; /* Change to your desired highlight color */
+  background-color: #541CD2;
 }
 
 .buch-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    align-content: center;
+    background-color: red;
 }
 
 .buch-info img {
-    margin-right: 80px; /* Add margin to the right of the image */
+    margin-right: 10vw; /* Add margin to the right of the image */
 }
-
-@media (min-width: 768px) {
-    #home {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .buch-info {
-        margin-top: 0;
-        margin-left: 20px;
-    }
-}
-
-/* a, a:active, a:visited {
-  color: blue;
-  text-decoration: none;
-} */
 
 .fly-in {
     opacity: 0;
     transform: translateX(-100%);
-    transition: transform 2s, opacity 2s; /* Increase the duration to 2 seconds */
+    transition: transform 1.5s, opacity 2s; /* Increase the duration to 2 seconds */
 }
 
 .fly-in-visible {
@@ -422,3 +405,22 @@ button::before {
 .angebot-title {
     color: #2E294E;
 }
+
+@media (min-width: 768px) {
+  #home {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+  }
+
+  .buch-info {
+      margin-top: 0;
+      margin-left: 20px;
+  }
+}
+
+/* a, a:active, a:visited {
+color: blue;
+text-decoration: none;
+} */
