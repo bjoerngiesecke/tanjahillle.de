@@ -52,16 +52,16 @@
 <!-- Das Buch -->
 
 <section id="buch">
-  <h2>Das Buch co-agile Organisationsentwicklung </h2>
+  <h2 class="buch-title">Das Buch co-agile Organisationsentwicklung</h2>
 
   <ul class="section-text">
-      <li>zeigt eine konkrete Möglichkeit auf klassische und agile Arbeitswelten gezielt und wirkungsvoll miteinander verbindet.</li>
-      <li>bietet einen systematischen Überblick agiler Prinzipien und Praktiken in der neuen Arbeitswelt.</li>
-      <li>illustriert eine Transformationsarchitektur, die die Bedürfnisse der Mitarbeitenden und die Vision der Organisation ausgleichend vereint.</li>
-      <li>beschreibt eine Organisationskultur, in der ständiges Lernen und Anpassungsfähigkeit möglich werden.</li>
-      <li>beinhaltet ein Fallbeispiel, an dem die Co-Agilität in der Praxis veranschaulicht wird. </li>
-    </ul>
-  </section>
+      <li class="fly-in">zeigt eine konkrete Möglichkeit auf klassische und agile Arbeitswelten gezielt und wirkungsvoll miteinander verbindet.</li>
+      <li class="fly-in">bietet einen systematischen Überblick agiler Prinzipien und Praktiken in der neuen Arbeitswelt.</li>
+      <li class="fly-in">illustriert eine Transformationsarchitektur, die die Bedürfnisse der Mitarbeitenden und die Vision der Organisation ausgleichend vereint.</li>
+      <li class="fly-in">beschreibt eine Organisationskultur, in der ständiges Lernen und Anpassungsfähigkeit möglich werden.</li>
+      <li class="fly-in">beinhaltet ein Fallbeispiel, an dem die Co-Agilität in der Praxis veranschaulicht wird.</li>
+  </ul>
+</section>
 
 <!-- Zwei Räume -->
 
@@ -252,6 +252,29 @@
     window.addEventListener('scroll', checkScroll);
     checkScroll(); // Initial check in case elements are already in view
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('.fly-in');
+
+    function checkScroll() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        items.forEach((item, index) => {
+            const itemTop = item.getBoundingClientRect().top;
+
+            if (itemTop < triggerBottom) {
+                setTimeout(() => {
+                    item.classList.add('fly-in-visible');
+                }, index * 200); // Delay each item by 200ms
+            } else {
+                item.classList.remove('fly-in-visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Initial check in case elements are already in view
+});
       </script>
 
   </body>
