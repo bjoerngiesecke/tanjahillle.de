@@ -99,6 +99,11 @@ h2 {
   font-style: italic;
   text-align: center;
   padding: 4% 18% 0% 18%;
+  background-color: #2A0E69;
+  color: white;
+  padding: 20px; /* Optional: Add some padding for better spacing */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  text-align: center; /* Optional: Center the text */
 }
 
 /* – – – – Akkordeon – – – – */
@@ -134,7 +139,7 @@ button::before {
 /* Adjusted accordion styling */
 .accordion {
   background-color: #2A0E69;
-  color: #2A0E69;
+  color: white;
   cursor: pointer;
   width: 60%;
   text-align: left;
@@ -144,15 +149,16 @@ button::before {
   border-radius: 12px; /* Rounded corners */
   padding: 18px;
   margin-bottom: 10px; /* Space between buttons */
+  list-style: none;
 }
 
 .accordion:hover {
-  background-color: #eee;
+  background-color: #9C78ED;
   border-radius: 15px 15px 0px 0px;
 }
 
 .accordion.active {
-  background-color: #eee;
+  background-color: #9C78ED;
   margin-bottom: 0px;
   border-radius: 15px 15px 0px 0px;
 }
@@ -325,7 +331,7 @@ button::before {
   
   .fixed-nav a:hover {
     background-color: #fefefe;
-    color: blue;
+    color: #541CD2;
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.8); /* Drop shadow on hover */
 }
 
@@ -361,7 +367,7 @@ button::before {
   }
 
 .fixed-nav .nav-link.active {
-  color: blue; /* Change to your desired highlight color */
+  color: #541CD2; /* Change to your desired highlight color */
 }
 
 .buch-info {
@@ -403,4 +409,16 @@ button::before {
 .fly-in-visible {
     opacity: 1;
     transform: translateX(0);
+}
+
+.buch-title {
+    color: #D83A15; /* Replace with the desired color */
+}
+
+.about-title {
+    color: #D83A15;
+}
+
+.angebot-title {
+    color: #2E294E;
 }
