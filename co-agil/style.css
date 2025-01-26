@@ -44,11 +44,24 @@ section {
   padding-right: 22%;
 }
 
-.imprint {
+.imprint-footer {
   font-family: 'Times New Roman', Times, serif;
   font-size: 0.8em;
   text-align: center;
   padding: 2% 0% 2% 0%;
+}
+
+.imprint {
+  background-color: #ebebeb;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 0vw 20vw 5vw 20vw;
+}
+
+sub {
+  display: block;
+  text-align: center;
 }
 
 h2 {
@@ -64,14 +77,12 @@ h2 {
 
 #home {
   background-color: #E9E1FB;
-  padding-top: 8%;
-  padding-bottom: 0% !important;
+  padding: 8% 0% 0% 0% !important;
 }
 
 .home-container {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* 2 parts for text, 1 part for image and link */
-  gap: 20px; /* Adjust the gap between the columns as needed */
+  grid-template-columns: 2fr 1.2fr; /* 2 parts for text, 1 part for image and link */
   align-items: center;
 }
 
@@ -135,18 +146,6 @@ button {
   font-size: 100%;
 }
 
-button::before {
-  content: "\02795"; /* Unicode character for "plus" sign (+) */
-  display: inline-block;
-  /* width: 20px;
-  height: 20px; */
-  margin-right: 14px; /* Space between disc and button text */
-  color: red;
-  /* border-radius: 50%; */
-  vertical-align: middle; /* Aligns it with the button text */
-  margin-bottom: 3px;
-}
-
 /* Center container with flexbox */
 .accordion-container {
   display: flex;
@@ -162,36 +161,42 @@ button::before {
   background-color: #2A0E69;
   color: white;
   cursor: pointer;
-  width: 60%;
-  text-align: left;
+  width: auto;
+  text-align: center;
   border: none;
   outline: none;
   transition: background-color, border-radius 0.2s ease;
   border-radius: 12px; /* Rounded corners */
   padding: 18px;
   margin-bottom: 10px; /* Space between buttons */
+  font-family: forma-djr-display, sans-serif;
+    font-size: 1.6vw;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: blue;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
 }
 
 .accordion:hover {
-  background-color: #9C78ED;
   border-radius: 15px 15px 0px 0px;
+  /* box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3); */
+  transition: all 0.2s ease;
 }
 
 .accordion.active {
-  background-color: #9C78ED;
   margin-bottom: 0px;
   border-radius: 15px 15px 0px 0px;
 }
 
 .panel {
-  width: 60%;
+  width: 60vw;
   display: none;
   overflow: hidden;
   margin: 0 auto; /* Center the panel */
-  background-color: #2A0E69;
-  color: white;
+  color: black;
   margin-bottom: 10px; /* Space between panels */
-  border-radius: 12px; /* Rounded corners */
   padding: 0 18px;
 }
 
@@ -250,12 +255,17 @@ button::before {
 .links:hover {
     background-color: #fefefe;
     color: blue;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.8); /* Drop shadow on hover */
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); /* Drop shadow on hover */
     transition: all 0.2s ease;
 }
 
 .links-spacer {
   margin-top: 1.1em;
+}
+
+.links-back {
+  margin-top: 3vw;
+  text-align: center;
 }
 
 .link-easy {
@@ -357,8 +367,8 @@ button::before {
   
   .fixed-nav a:hover {
     color: #fefefe;
-    background-color: #541CD2;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.8); /* Drop shadow on hover */
+    background-color: #7b68ee;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); /* Drop shadow on hover */
 }
 
 /* Zeitliche Staffelung der Animation für jedes Navigationselement */
@@ -394,7 +404,7 @@ button::before {
 
 .fixed-nav .nav-link.active {
   color: white; /* Change to your desired highlight color */
-  background-color: #541CD2;
+  background-color: #7b68ee;
 }
 
 .fly-in {
