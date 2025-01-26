@@ -10,7 +10,7 @@
   <body>
     
     <nav class="fixed-nav">
-      <a href="#home" class="home nav-link">Co-Agilität</a>
+      <a href="#home" class="home nav-link active">Co-Agilität</a>
       <a href="#buch" class="buch nav-link">Das Buch</a>
       <a href="#zweiraeume" class="zweiraeume nav-link">Zwei Räume</a>
       <a href="#angebot" class="contact nav-link">Unsere Angebote</a>
@@ -47,7 +47,7 @@
 <!-- Das Buch -->
 
 <section id="buch">
-  <h2 class="buch-title">Das Buch co-agile Organisationsentwicklung</h2>
+  <h2>Das Buch co-agile Organisationsentwicklung</h2>
 
   <ul class="section-text">
       <li class="fly-in">ermöglicht die gezielte und wirkungsvolle Verbindung von klassischen und agilen Arbeitswelten</li>
@@ -130,7 +130,7 @@
   <!-- Unsere Angebote -->
 
   <section id="angebot">
-    <h2 class="angebot-title">Unsere Angebote</h2>
+    <h2>Unsere Angebote</h2>
 
     <div class="accordion-container">
         <button class="accordion">Organisationsentwicklung & Transformation<br/></button>
@@ -158,7 +158,7 @@
 <!-- About -->
 
     <section id="about">
-       <h2 class="about-title">Über uns</h2>
+       <h2>Über uns</h2>
        <div class="section-text">
           <p>
             Stephanie Sievers und Tanja Hille sind als Organisationsberaterinnen und Transformationsbegleiterinnen selbstständig tätig. Sie arbeiten überwiegend mit gemeinwohlorientierten Organisationen zusammen, wie zum Beispiel mit öffentlichen Verwaltungen, Wohlfahrtsorganisationen, Verbänden, Unfall- und Krankenkassen, Hochrisikoorganisationen, Stiftungen, Vereinen und weiteren. Dafür vereinen sie ihre Hintergründe und Fähigkeiten. 
@@ -169,12 +169,14 @@
           <img src="img/Stephanie-Sievers.jpg" alt="Stephanie Sievers">
           <p>Stephanie Sievers absolvierte ihr Studium der Psychologie an der Universität Münster. Anschließend war sie fünf Jahre lang in einer auf den öffentlichen Sektor spezialisierten Managementberatung tätig.</p>
           <div class="links-spacer">Website: <a href="https://www.stephaniesievers.de" target="_blank" class="links">stephaniesievers.de</a></div>
+          <div class="links-spacer">E-Mail: <a href="mailto:kontakt@stephaniesievers.de" class="links">kontakt@stephaniesievers.de</a></div>
         </div>
         
         <div class="profile">
           <img src="img/_NCF8037.jpg" alt="Tanja Hille">
           <p>Tanja Hille hat einen Hintergrund in Politikwissenschaft an der Freien Universität Berlin. Vor ihrer Tätigkeit in einer Managementberatung hat sie in einem politischen Think-Tank gearbeitet sowie in der politischen Bildung als Trainerin und Moderatorin.</p>
           <div class="links-spacer">Website: <a href="https://tanjahille.de" target="_blank" class="links">tanjahille.de</a></div>
+          <div class="links-spacer">E-Mail: <a href="mailto:mail@tanjahille.de" class="links">mail@tanjahille.de</a></div>
         </div>
       </div>
     </section>
@@ -269,6 +271,21 @@
     window.addEventListener('scroll', checkScroll);
     checkScroll(); // Initial check in case elements are already in view
 });
+
+            //add active class to nav links based on current section
+            document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            const currentHash = window.location.hash || '#home';
+            const activeLink = document.querySelector(`.nav-link[href="${currentHash}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        });
+
       </script>
 
   </body>

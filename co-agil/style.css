@@ -97,34 +97,35 @@ h2 {
 }
 
 #zweiraeume {
-  background-color: #2A0E69;
+  background-color: #7b68ee;
   padding-bottom: 4% !important;
 }
 
 #buch {
-  background-color: #FCE2DB;
+  background-color: #b79773;
 }
 
 #about {
-  background-color: #FCE2DB;
+  background-color: #ebebeb;
 }
 
 #angebot {
-  background-color: #E9E1FB;
+  background-color: blanchedalmond;
 }
 
 #links {
-  background-color: #D83A15;
+  background-color: #ff0;
 }
 
 .zitat {
-  font-style: italic;
+  font-family: forma-djr-display, sans-serif;
+  font-size: 3vw;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: blanchedalmond;
   text-align: center;
-  padding: 0% 18% 8% 18%;
-  background-color: #2A0E69;
-  color: white;
-  text-align: center;
-  font-size: 1.5em;
+  padding: 8% 18% 8% 18%;
+  background-color: #7b68ee;
 }
 
 /* – – – – Akkordeon – – – – */
@@ -211,14 +212,16 @@ button::before {
 .profile img {
   aspect-ratio: 3 / 4;
   width: 100%;
-  max-width: 300px; /* Adjust as needed for responsive scaling */
+  max-width: 25vw; /* Adjust as needed for responsive scaling */
   border-radius: 15px; /* Adjust border-radius as needed */
   object-fit: cover;
   height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image */
 }
 
 .profile-container {
-  margin: 1em 6em 0em 6em;
+  margin: 5vw 6em 0em 6em;
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -226,14 +229,17 @@ button::before {
 
 .profile {
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .profile p {
-  margin-top: 10px;
+  margin-top: 2vw;
 }
 
 .links {
+    font-family: forma-djr-display, sans-serif;
+    font-size: 1.5vw;
+    letter-spacing: 0.05em;
     text-decoration: none;
     color: blue;
     background-color: white;
@@ -400,18 +406,6 @@ button::before {
 .fly-in-visible {
     opacity: 1;
     transform: translateX(0);
-}
-
-.buch-title {
-    color: #D83A15; /* Replace with the desired color */
-}
-
-.about-title {
-    color: #D83A15;
-}
-
-.angebot-title {
-    color: #2E294E;
 }
 
 @media (min-width: 768px) {
