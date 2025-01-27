@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/vbs0gvj.css">
+    <style>
+
+        /* Basic styling for the navigation */
+.site-nav {
+  position: static;
+  padding: 0;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav a {
+  display: block;
+  text-decoration: none;
+  background: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #0b74b8;
+  color: white;
+}
+
+.site-nav .current a {
+  background: #666;
+  color: white;
+}
+
+/* Responsive styling for larger screens */
+@media (min-width: 768px) {
+  .site-nav ul {
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+
+  .site-nav a {
+    margin: 0 1rem;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+    <nav class="site-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+  </body>
+</html>

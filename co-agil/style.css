@@ -14,10 +14,10 @@ body {
 }
 
 .title {
-  font-family: forma-djr-display, sans-serif;
   color: #2E294E;
-  font-size: 9vw;
+  font-family: forma-djr-display, sans-serif;
   font-weight: 800;
+  font-size: 9vw;
   text-align: center;
   text-transform: uppercase;
   padding: 5% 0% 5% 0%;
@@ -244,7 +244,7 @@ button {
 .links {
     font-family: forma-djr-display, sans-serif;
     font-size: 1.5vw;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-decoration: none;
     color: blue;
     background-color: white;
