@@ -5,6 +5,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
     font-family: forma-djr-display, sans-serif;
     color: #2E294E;
@@ -13,6 +17,7 @@ body {
     letter-spacing: 0.04em;
     /* letter-spacing: 0.08rem; */
     /* word-spacing: 10%; */
+    overflow-x: hidden;
 }
 
 .title {
