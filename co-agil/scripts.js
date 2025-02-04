@@ -97,14 +97,19 @@ checkScroll(); // Initial check in case elements are already in view
     }
 });
 
+// navigation mobile
+
 document.addEventListener('DOMContentLoaded', function() {
   if (window.matchMedia("(max-width: 768px)").matches) { // Adjust the max-width as needed
-    document.querySelectorAll('.fixed-nav a').forEach(anchor => {
+    const navLinks = document.querySelectorAll('.fixed-nav a');
+    const sections = document.querySelectorAll('section'); // Assuming your sections have the <section> tag
+
+    navLinks.forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
         
         // Remove 'click' class from all nav elements
-        document.querySelectorAll('.fixed-nav a').forEach(navItem => {
+        navLinks.forEach(navItem => {
           navItem.classList.remove('click');
         });
 
@@ -120,6 +125,31 @@ document.addEventListener('DOMContentLoaded', function() {
           behavior: 'smooth'
         });
       });
+    });
+
+    // IntersectionObserver to update active link on scroll
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Adjust this value as needed
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(navItem => {
+            navItem.classList.remove('click');
+          });
+          const activeLink = document.querySelector(`.fixed-nav a[href="#${entry.target.id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('click');
+          }
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
     });
   }
 });
