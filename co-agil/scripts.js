@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        const offset = window.innerHeight * 0.08; // 8vh offset
+        const offset = window.innerHeight * 0.07; // 8vh offset
 
         window.scrollTo({
           top: targetElement.offsetTop - offset,
