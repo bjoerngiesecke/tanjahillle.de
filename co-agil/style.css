@@ -524,8 +524,12 @@ hr {
   }
 
   section {
-    padding-top: 22%;
+    padding-top: 20%; /* 22% was working */
     padding-bottom: 2%;
+  }
+
+  h2 {
+    padding-bottom: 10%;
   }
 
   #home {
