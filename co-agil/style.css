@@ -584,7 +584,12 @@ hr {
     font-size: 1em;
   }
 
+  .nav-wrapper {
+    display: flex;
+  }
+
   .fixed-nav {
+    display: inline-block;
     flex-direction: column;
     gap: 0px;
     text-align: center;
