@@ -11,20 +11,26 @@ html {
 
 body {
     font-family: forma-djr-display, sans-serif;
-    color: #2E294E;
+    background: linear-gradient(to bottom, #ffffff, #7b68ee);
     font-size: 1.6em;
     font-weight: 500;
     letter-spacing: 0.04em;
     /* letter-spacing: 0.08rem; */
     /* word-spacing: 10%; */
     overflow-x: hidden;
+    color: #7b68ee;
+}
+
+b {
+  letter-spacing: 0.075em;
 }
 
 .title {
-  color: #2E294E;
   font-family: forma-djr-display, sans-serif;
   font-weight: 800;
   font-size: 9vw;
+  /* color: #2E294E; */
+  color: #7b68ee;
   text-align: center;
   text-transform: uppercase;
   padding: 5% 0% 5% 0%;
@@ -32,9 +38,9 @@ body {
 
 .subtitle {
   font-family: forma-djr-display, sans-serif;
-  color: #2E294E;
   font-weight: 500;
   font-size: 2.2vw;
+  color: #7b68ee;
   line-height: 1.1em;
   letter-spacing: 0.05em;
   text-align: center;
@@ -49,21 +55,22 @@ section {
   /* padding: 0% 22% 0% 22%; */
   padding-left: 22%;
   padding-right: 22%;
+  color: #7b68ee;
 }
 
 .imprint-footer {
-  font-family: 'Times New Roman', Times, serif;
   font-size: 0.8em;
   text-align: center;
   padding: 2% 0% 2% 0%;
 }
 
 .imprint {
-  background-color: #ebebeb;
+  background-color: rgb(235, 235, 235, 0.8);
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.2em;
   text-align: left;
-  padding: 0vw 20vw 5vw 20vw;
+  padding: 0vw 20vw 6vw 20vw;
+  height: 100vh;
 }
 
 sub {
@@ -73,7 +80,6 @@ sub {
 
 h2 {
   font-family: forma-djr-display, sans-serif;
-  color: black;
   font-weight: 500;
   font-size: 2.5em;
   line-height: 1em;
@@ -83,7 +89,7 @@ h2 {
 }
 
 #home {
-  background-color: #E9E1FB;
+  /* background-color: #E9E1FB; */
   padding: 8% 0% 0% 0% !important;
 }
 
@@ -110,40 +116,75 @@ h2 {
   width: 22vw;
 }
 
-#intro {
-  background-color: #E9E1FB;
+.buchcover:hover {
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
 }
 
+.buch-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  gap: 4vw; /* Space between the image and text */;
+  margin-top: 8vw;
+}
+
+.buchcover-small {
+  max-width: 15vw; /* Adjust the width as needed */
+  height: auto;
+}
+
+.buchcover-small:hover {
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.buch-text {
+  font-size: 1.2vw;
+}
+
+.buch-text p {
+  margin-bottom: 10px;
+}
+
+hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #000;
+}
+
+/* #intro {
+  background-color: #E9E1FB;
+} */
+
+/* #buch {
+  background-color: floralwhite;
+} */
+
 #zweiraeume {
-  background-color: #7b68ee;
+  /* background-color: #7b68ee; */
   padding-bottom: 4% !important;
 }
 
-#buch {
-  background-color: #b79773;
-}
-
-#about {
+/* #about {
   background-color: #ebebeb;
-}
+} */
 
-#angebot {
+/* #angebot {
   background-color: blanchedalmond;
-}
+} */
 
-#links {
+/* #links {
   background-color: #ff0;
-}
+} */
 
 .zitat {
   font-family: forma-djr-display, sans-serif;
   font-size: 3vw;
   letter-spacing: 0.05em;
   text-decoration: none;
-  color: blanchedalmond;
   text-align: center;
-  padding: 8% 18% 8% 18%;
-  background-color: #7b68ee;
+  padding: 4% 18% 8% 18%;
 }
 
 /* – – – – Akkordeon – – – – */
@@ -165,30 +206,25 @@ button {
 
 /* Adjusted accordion styling */
 .accordion {
-  background-color: #2A0E69;
-  color: white;
   cursor: pointer;
   width: auto;
   text-align: center;
   border: none;
   outline: none;
   transition: background-color, border-radius 0.2s ease;
-  border-radius: 12px; /* Rounded corners */
-  padding: 18px;
+  border-radius: 30px; /* Rounded corners */
   margin-bottom: 10px; /* Space between buttons */
   font-family: forma-djr-display, sans-serif;
   font-weight: 500;
-    font-size: 1.6vw;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    color: blue;
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
+  font-size: 1.6vw;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px 20px;
 }
 
 .accordion:hover {
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 18px 18px 0px 0px;
   /* box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3); */
   transition: all 0.2s ease;
 }
@@ -203,7 +239,6 @@ button {
   display: none;
   overflow: hidden;
   margin: 0 auto; /* Center the panel */
-  color: black;
   margin-bottom: 10px; /* Space between panels */
   padding: 0 18px;
 }
@@ -233,6 +268,11 @@ button {
   margin: 0 auto; /* Center the image */
 }
 
+.profile img:hover {
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
 .profile-container {
   margin: 5vw 6em 0em 6em;
   display: flex;
@@ -246,7 +286,7 @@ button {
 }
 
 .profile p {
-  margin-top: 2vw;
+  margin-top: 2.8vw;
 }
 
 .links {
@@ -254,7 +294,7 @@ button {
     font-size: 1.5vw;
     letter-spacing: 0.06em;
     text-decoration: none;
-    color: blue;
+    color: black;
     background-color: white;
     padding: 10px 20px;
     border-radius: 30px;
@@ -298,20 +338,27 @@ button {
 .raum-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: stretch;
+  gap: 2vw;
   font-size: 0.8em;
   overflow: hidden;
+  padding: 1vw 3vw 1vw 3vw;
 }
 
 .container-klassisch {
   background-color: #ece6ff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 20px;
   text-align: left;
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 1s, opacity 1s;
+  flex-direction: column;
+}
+
+.container-klassisch:hover {
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
 }
 
 .container-klassisch.slide-in-left {
@@ -321,12 +368,18 @@ button {
 
 .container-agil {
   background-color: #FCE2DB;
-  padding: 20px;
+  padding: 30px;
   border-radius: 20px;
   text-align: left;
   transform: translateX(100%);
   opacity: 0;
   transition: transform 1s, opacity 1s;
+  flex-direction: column;
+}
+
+.container-agil:hover {
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
 }
 
 .container-agil.slide-in-right {
@@ -344,6 +397,12 @@ button {
 
 .section {
   margin-bottom: 15px;
+}
+
+hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #000;
 }
 
 /* – – – – Navigation – – – – */

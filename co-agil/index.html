@@ -27,7 +27,7 @@
           </div>
           <div class="buch-info">
               <img src="img/Buchtitel.webp" class="buchcover" alt="Buchcover">
-              <a href="https://bit.ly/4fqhr77" class="links" style="margin: 2%;">Buch bestellen</a>
+              <a href="https://bit.ly/4fqhr77" class="links" style="margin: 4%;">Zum Verlag</a>
           </div>
       </div>
 </section>
@@ -48,13 +48,37 @@
 <section id="buch">
   <h2>Das Buch co-agile Organisationsentwicklung</h2>
 
-  <ul class="section-text">
+    <ul class="section-text">
       <li class="fly-in">ermöglicht die gezielte und wirkungsvolle Verbindung von klassischen und agilen Arbeitswelten</li>
       <li class="fly-in">bietet einen systematischen Überblick agiler Prinzipien und Praktiken in der neuen Arbeitswelt</li>
       <li class="fly-in">illustriert eine Transformationsarchitektur, die die Bedürfnisse der Mitarbeitenden und die Vision der Organisation ausgleichend vereint</li>
       <li class="fly-in">beschreibt eine Organisationskultur, in der ständiges Lernen und Anpassungsfähigkeit möglich werden</li>
       <li class="fly-in">beinhaltet ein Fallbeispiel, an dem die Co-Agilität in der Praxis veranschaulicht wird</li>
-  </ul>
+    </ul>
+
+    <div class="buch-container">
+    <img src="img/Buchtitel.webp" class="buchcover-small" alt="Buchcover">
+    <div class="buch-text">
+      <p>
+        <b>Co-Agile Organisationsentwicklung</b>
+      </p>
+      <hr>
+      <p>
+      Tanja Hille, Stephanie Sievers
+      </p>
+      <hr>
+      <p>
+      2025, 62 Seiten, Springer Gabler, 978-3-658-46128-7
+      </p>
+      <hr>
+      <p>
+      Buch: 14,99€, E-Book: 9,99€
+      </p>
+      <hr>
+      <br>
+      <a href="https://bit.ly/4fqhr77" class="links">Zum Verlag</a>
+    </div>
+  </div>
 </section>
 
 <!-- Zwei Räume -->
@@ -68,22 +92,27 @@
           <div class="section">
               <h4>Werte</h4>
               <p>Vollständigkeit, Richtigkeit, Planbarkeit, Ordnung, Stabilität, Sicherheit</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Mindset</h4>
               <p>sicherheits- und stabilitätsorientiert</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Führung & Zusammenarbeit</h4>
               <p>vertikale Hierarchie, Stellen und Positionen</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Projektarchitektur</h4>
               <p>Wasserfall in aufeinanderfolgenden abgeschlossenen Phasen</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Struktur</h4>
               <p>pyramidal</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Typische Meetings</h4>
@@ -96,22 +125,27 @@
           <div class="section">
               <h4>Werte</h4>
               <p>Commitment, Offenheit, Mut, Einfachheit, Fokus</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Mindset</h4>
               <p>veränderungs- und lernorientiert</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Führung & Zusammenarbeit</h4>
               <p>geteilte Führung, horizontale Hierarchie und Rollen</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Projektarchitektur</h4>
               <p>iteratives und inkrementelles Vorgehen in sich wiederholenden Zyklen</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Struktur</h4>
               <p>netzwerkartig</p>
+              <hr>
           </div>
           <div class="section">
               <h4>Typische Meetings</h4>
@@ -121,9 +155,8 @@
   </div>
 </section>
 
-  <div class="zitat">
+  <section class="zitat">
     &bdquo;Die 2-Raum-Kompetenz beschreibt die Fähigkeit, sich sicher durch beide Räume einer co-agilen Organisation zu bewegen und dabei ihren Eigenlogiken, Abgrenzungen und Verbindungen zu berücksichtigen.&ldquo;
-  </div>
   </section>
 
   <!-- Unsere Angebote -->
@@ -185,107 +218,6 @@
         <a href="imprint.html" class="link-easy">Impressum</a>
       </section>
 
-      <script>
-        const acc = document.querySelectorAll(".accordion");
-        acc.forEach(button => {
-          button.addEventListener("click", function() {
-            this.classList.toggle("active");
-            const panel = this.nextElementSibling;
-            panel.style.display = panel.style.display === "block" ? "none" : "block";
-          });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-          const sections = document.querySelectorAll('section');
-          const navLinks = document.querySelectorAll('.nav-link');
-      
-          function onScroll() {
-            let currentSection = '';
-      
-            sections.forEach(section => {
-              const sectionTop = section.offsetTop;
-              if (pageYOffset >= sectionTop - 60) { // Adjust offset as needed
-                currentSection = section.getAttribute('id');
-              }
-            });
-      
-            navLinks.forEach(link => {
-              link.classList.remove('active');
-              if (link.getAttribute('href').substring(1) === currentSection) {
-                link.classList.add('active');
-              }
-            });
-          }
-      
-          window.addEventListener('scroll', onScroll);
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-    const klassisch = document.querySelector('.container-klassisch');
-    const agil = document.querySelector('.container-agil');
-
-    function checkScroll() {
-        const triggerBottom = window.innerHeight / 5 * 5; // Increase the bottom trigger point
-        const triggerTop = window.innerHeight / 5 * 0.5; // Decrease the top trigger point
-
-        const klassischTop = klassisch.getBoundingClientRect().top;
-        const agilTop = agil.getBoundingClientRect().top;
-
-        if (klassischTop < triggerBottom && klassischTop > triggerTop) {
-            klassisch.classList.add('slide-in-left');
-        } else {
-            klassisch.classList.remove('slide-in-left');
-        }
-
-        if (agilTop < triggerBottom && agilTop > triggerTop) {
-            agil.classList.add('slide-in-right');
-        } else {
-            agil.classList.remove('slide-in-right');
-        }
-    }
-
-    window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Initial check in case elements are already in view
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-    const items = document.querySelectorAll('.fly-in');
-
-    function checkScroll() {
-        const triggerBottom = window.innerHeight / 5 * 4;
-
-        items.forEach((item, index) => {
-            const itemTop = item.getBoundingClientRect().top;
-
-            if (itemTop < triggerBottom) {
-                setTimeout(() => {
-                    item.classList.add('fly-in-visible');
-                }, index * 200); // Delay each item by 200ms
-            } else {
-                item.classList.remove('fly-in-visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Initial check in case elements are already in view
-});
-
-            //add active class to nav links based on current section
-            document.addEventListener("DOMContentLoaded", function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-
-            const currentHash = window.location.hash || '#home';
-            const activeLink = document.querySelector(`.nav-link[href="${currentHash}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-        });
-
-      </script>
-
+    <script src="scripts.js"></script>
   </body>
 </html>
