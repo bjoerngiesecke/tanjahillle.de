@@ -515,8 +515,13 @@ hr {
 /* Mobile responsive styling */
 
 @media (max-width: 768px) {
+  :root {
+    --scroll-padding: 20vh; /* Adjust the offset as needed */
+  }
+  
   body {
     font-size: 1.2em;
+    scroll-padding-top: var(--scroll-padding);
   }
 
   #home {
