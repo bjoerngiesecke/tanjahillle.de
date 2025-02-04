@@ -96,3 +96,21 @@ checkScroll(); // Initial check in case elements are already in view
         activeLink.classList.add('active');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.matchMedia("(max-width: 768px)").matches) { // Adjust the max-width as needed
+    document.querySelectorAll('.fixed-nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const offset = window.innerHeight * 0.06; // 6vh offset
+
+        window.scrollTo({
+          top: targetElement.offsetTop - offset,
+          behavior: 'smooth'
+        });
+      });
+    });
+  }
+});
