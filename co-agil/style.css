@@ -515,21 +515,50 @@ hr {
     -webkit-text-fill-color: initial;
 }
 
-@media (min-width: 768px) {
-  #home {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      text-align: left;
+/* Mobile responsive styling */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2em;
   }
 
-  .buch-info {
-      margin-top: 0;
-      margin-left: 20px;
+  .title {
+    font-size: 12vw;
+  }
+
+  .subtitle {
+    font-size: 4vw;
+  }
+
+  .section-text {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .links {
+    font-size: 1em;
+  }
+
+  .fixed-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fixed-nav a {
+    font-size: 4vw;
+    padding: 5px 10px;
+  }
+
+  .buch-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buchcover {
+    max-width: 80%;
+  }
+
+  .buch-text {
+    text-align: center;
   }
 }
-
-/* a, a:active, a:visited {
-color: blue;
-text-decoration: none;
-} */
