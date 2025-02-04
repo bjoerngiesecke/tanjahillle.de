@@ -524,8 +524,8 @@ hr {
   }
 
   section {
-    padding-top: 2%;
-    padding-bottom: 16%;
+    padding-top: 22%;
+    padding-bottom: 2%;
   }
 
   #home {
@@ -649,6 +649,6 @@ hr {
   }
 
   .imprint-footer {
-    padding: 0% 0% 10% 0%;
+    padding: 16% 0% 10% 0%;
   }
 }
