@@ -25,6 +25,14 @@ b {
   letter-spacing: 0.075em;
 }
 
+.gradient-text {
+  /* background: linear-gradient(to bottom, #7b68ee, #ffffff); */
+  background: linear-gradient(to bottom, #7b68ee 0%, #b7afe5 45%, #d6d6f5 55%, #ffffff 100%); /* Adjusted gradient for smoother transition */
+  background-clip: text; /* Apply the gradient to the text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .title {
   font-family: forma-djr-display, sans-serif;
   font-weight: 800;
@@ -192,6 +200,10 @@ hr {
 button {
   font-family: 'Times New Roman', Times, serif;
   font-size: 100%;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: #7b68ee !important; /* Original color */
 }
 
 /* Center container with flexbox */
@@ -290,12 +302,15 @@ button {
 }
 
 .links {
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: #7b68ee !important; /* Original color */
+    background-color: white !important;
     font-family: forma-djr-display, sans-serif;
     font-size: 1.5vw;
     letter-spacing: 0.06em;
     text-decoration: none;
-    color: black;
-    background-color: white;
     padding: 10px 20px;
     border-radius: 30px;
 }
@@ -343,6 +358,10 @@ button {
   font-size: 0.8em;
   overflow: hidden;
   padding: 1vw 3vw 1vw 3vw;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: #7b68ee !important; /* Original color */
 }
 
 .container-klassisch {
@@ -402,7 +421,7 @@ button {
 hr {
   margin: 10px 0;
   border: 0;
-  border-top: 1px solid #000;
+  border-top: 1px solid #7b68ee;
 }
 
 /* – – – – Navigation – – – – */
@@ -420,11 +439,15 @@ hr {
     gap: 15px;
     padding: 10px;
     z-index: 1000;
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: #7b68ee !important; /* Original color */
 }
   
-    .fixed-nav a {
+  .fixed-nav a {
     text-decoration: none;
-    color: black;
+    color: #7b68ee;
     background-color: white;
     padding: 10px 20px;
     border-radius: 30px;
@@ -485,6 +508,9 @@ hr {
 .fly-in-visible {
     opacity: 1;
     transform: translateX(0);
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
 }
 
 @media (min-width: 768px) {
