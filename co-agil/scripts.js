@@ -96,3 +96,20 @@ checkScroll(); // Initial check in case elements are already in view
         activeLink.classList.add('active');
     }
 });
+
+let lastScrollTop = 0;
+const nav = document.querySelector('.fixed-nav');
+
+window.addEventListener('scroll', function() {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down
+    nav.classList.add('hidden');
+  } else {
+    // Scrolling up
+    nav.classList.remove('hidden');
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+});

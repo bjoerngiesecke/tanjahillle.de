@@ -526,7 +526,7 @@ hr {
   h2 {
     overflow-wrap: break-word; /* Use overflow-wrap for better word breaking */
     hyphens: auto; /* Enable hyphenation for better word breaks */
-}
+  }
 
   .home-container {
     grid-template-columns: 1fr; /* Adjust the grid layout for mobile */
@@ -588,6 +588,12 @@ hr {
     flex-direction: column;
     gap: 0px;
     text-align: center;
+    transition: top 0.3s; /* Smooth transition for hiding/showing */
+    top: 0; /* Initial position */
+  }
+
+  .fixed-nav.hidden {
+    top: -100px; /* Adjust this value to hide the nav */
   }
 
   .fixed-nav a {
