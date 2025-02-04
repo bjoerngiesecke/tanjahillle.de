@@ -519,17 +519,20 @@ hr {
     font-size: 1.2em;
   }
 
+  section {
+    padding-top: 6%;
+  }
+
   #home {
     padding: 20vh 0% 0% 0% !important;
   }
 
-  .subtitle {
-    font-size: 1.2em;
+  .title {
+    font-size: 5em;
   }
 
-  h2 {
-    overflow-wrap: break-word; /* Use overflow-wrap for better word breaking */
-    hyphens: auto; /* Enable hyphenation for better word breaks */
+  .subtitle {
+    font-size: 1.2em;
   }
 
   .home-container {
