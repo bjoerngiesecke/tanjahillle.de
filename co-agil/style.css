@@ -461,6 +461,7 @@ hr {
     color: #fefefe;
     background-color: #7b68ee;
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); /* Drop shadow on hover */
+    transition: background-color 0.6s ease;
 }
 
 /* Zeitliche Staffelung der Animation für jedes Navigationselement */
@@ -497,6 +498,7 @@ hr {
 .fixed-nav .nav-link.active {
   color: white; /* Change to your desired highlight color */
   background-color: #7b68ee;
+  transition: background-color 1s ease;
 }
 
 .fly-in {
