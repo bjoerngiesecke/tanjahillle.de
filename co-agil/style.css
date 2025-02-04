@@ -520,7 +520,11 @@ hr {
   }
 
   #home {
-    padding: 50% 0% 0% 0% !important;
+    padding: 20% 0% 0% 0% !important;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
   }
 
   h2 {
@@ -589,9 +593,10 @@ hr {
   }
 
   .fixed-nav {
-    display: inline-block;
-    flex-direction: column;
-    gap: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    font-size: 1.2em;
     text-align: center;
     transition: top 0.3s; /* Smooth transition for hiding/showing */
     top: 0; /* Initial position */
@@ -602,8 +607,8 @@ hr {
   }
 
   .fixed-nav a {
-    font-size: 4vw;
     padding: 5px 10px;
+    white-space: nowrap;
   }
 
   .buch-container {
@@ -627,6 +632,10 @@ hr {
   .container-agil, .container-klassisch {
     padding: 2%;
     font-size: 0.8em;
+  }
+
+  .section {
+    margin-bottom: 5px;
   }
 
   .profile-container {  
