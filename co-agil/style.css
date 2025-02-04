@@ -618,6 +618,10 @@ hr {
     max-width: 80%;
   }
 
+  .imprint {
+    padding: 0% 5% 6% 5%;
+  }
+
   .imprint-footer {
     padding: 0% 0% 10% 0%;
   }
