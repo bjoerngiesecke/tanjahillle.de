@@ -517,14 +517,10 @@ hr {
 @media (max-width: 768px) {
   body {
     font-size: 1.2em;
-    font-weight: normal; /* Ensure consistent font weight */
-    font-family: inherit; /* Ensure consistent font family */
   }
 
   .subtitle {
     font-size: 1.2em;
-    font-weight: normal; /* Ensure consistent font weight */
-    font-family: inherit; /* Ensure consistent font family */
   }
 
   section {
