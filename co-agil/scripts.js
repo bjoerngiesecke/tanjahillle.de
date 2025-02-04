@@ -126,30 +126,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     });
-
-    // IntersectionObserver to update active link on scroll
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5 // Adjust this value as needed
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(navItem => {
-            navItem.classList.remove('click');
-          });
-          const activeLink = document.querySelector(`.fixed-nav a[href="#${entry.target.id}"]`);
-          if (activeLink) {
-            activeLink.classList.add('click');
-          }
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  }
-});
+}});
