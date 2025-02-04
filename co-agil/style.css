@@ -619,6 +619,16 @@ hr {
     text-align: center;
   }
 
+  .raum-container {
+    gap: 1%;
+    padding: 2% 0% 2% 0%;
+  }
+
+  .container-agil, .container-klassisch {
+    padding: 2%;
+    font-size: 0.8em;
+  }
+
   .profile-container {  
     flex-direction: column;
     align-items: center;
