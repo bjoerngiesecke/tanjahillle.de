@@ -593,7 +593,7 @@ hr {
   }
 
   .fixed-nav.hidden {
-    top: -100px; /* Adjust this value to hide the nav */
+    top: -200px; /* Adjust this value to hide the nav */
   }
 
   .fixed-nav a {
