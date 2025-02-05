@@ -614,6 +614,8 @@ hr {
   .buch-container {
     flex-direction: column;
     align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .buchcover {
@@ -622,6 +624,10 @@ hr {
 
   .buch-text {
     text-align: center;
+  }
+
+  .raum-container hr {
+    display: none;
   }
 
   .raum-container {
