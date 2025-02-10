@@ -37,7 +37,7 @@ const klassisch = document.querySelector('.container-klassisch');
 const agil = document.querySelector('.container-agil');
 
 function checkScroll() {
-const triggerBottom = window.innerHeight / 5 * 5; // Increase the bottom trigger point
+const triggerBottom = window.innerHeight / 5 * 8; // Increase the bottom trigger point
 const triggerTop = window.innerHeight / 5 * 0.5; // Decrease the top trigger point
 
 const klassischTop = klassisch.getBoundingClientRect().top;
