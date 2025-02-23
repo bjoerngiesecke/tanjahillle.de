@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: forma-djr-display, sans-serif;
-    background: linear-gradient(to bottom, #ffffff, #7b68ee);
+    background: #ffffff;
     font-size: 1.6em;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -25,13 +25,6 @@ b {
   letter-spacing: 0.075em;
 }
 
-.gradient-text {
-  /* background: linear-gradient(to bottom, #7b68ee, #ffffff); */
-  background: linear-gradient(to bottom, #7b68ee 0%, #b7afe5 45%, #d6d6f5 55%, #ffffff 100%); /* Adjusted gradient for smoother transition */
-  background-clip: text; /* Apply the gradient to the text */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .title {
   font-family: forma-djr-display, sans-serif;
@@ -41,7 +34,38 @@ b {
   color: #7b68ee;
   text-align: center;
   text-transform: uppercase;
-  padding: 5% 0% 5% 0%;
+  padding: 5% 0% 5% 0%;  .home-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .buch-info {
+      flex: 1;
+      text-align: center; /* Center the image horizontally */
+  }
+  
+  .buchcover {
+      max-width: 100%;
+      height: auto;
+  }
+  
+  .home-text {
+      flex: 1;
+      padding: 20px; /* Add some padding for better spacing */
+      text-align: left; /* Align text to the left */
+  }
+  
+  @media (max-width: 768px) {
+      .home-container {
+          flex-direction: column; /* Stack items vertically on smaller screens */
+      }
+  
+      .home-text {
+          text-align: center; /* Center text on smaller screens */
+      }
+  }
 }
 
 .subtitle {
@@ -56,14 +80,50 @@ b {
 
 section {
   padding-top: 4%;
-  padding-bottom: 8%;
+  padding-bottom: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .section-text {
   /* padding: 0% 22% 0% 22%; */
-  padding-left: 22%;
-  padding-right: 22%;
+  padding-left: 20%;
+  padding-right: 20%;
   color: #7b68ee;
+}
+
+
+.leistung-titel {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: 500;
+  font-size: 2.2vw;
+  color: #7b68ee;
+  line-height: 3em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding-bottom: 0.5%;
+  padding-top: 1%;
+}
+
+.leistung-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1 part for text, 1 part for accordion */
+  align-items: center;
+  align-items: start;
+}
+
+.leistung-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
 }
 
 .imprint-footer {
@@ -93,7 +153,7 @@ h2 {
   line-height: 1em;
   letter-spacing: 0.05em;
   text-align: center;
-  padding: 8% 10% 7% 10%;
+  padding: 5% 10% 3% 10%;
 }
 
 #home {
@@ -103,7 +163,7 @@ h2 {
 
 .home-container {
   display: grid;
-  grid-template-columns: 2fr 1.2fr; /* 2 parts for text, 1 part for image and link */
+  grid-template-columns: 1fr 2fr; /* 2 parts for text, 1 part for image and link */
   align-items: center;
 }
 
@@ -230,7 +290,7 @@ button {
   font-size: 1.6vw;
   letter-spacing: 0.05em;
   text-decoration: none;
-  background-color: white;
+  background-color: mediumaquamarine;
   padding: 10px 20px;
 }
 
@@ -256,6 +316,7 @@ button {
 
 .panel p {
   margin: 15px 0; /* Adjust paragraph margin */
+  font-size: 1.6vw;
 }
 
 /* – – – – Tanja Stephie Images START – – – – */
