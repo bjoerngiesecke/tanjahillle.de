@@ -321,6 +321,13 @@ button {
 
 /* – – – – Tanja Stephie Images START – – – – */
 
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1 part for text, 1 part for accordion */
+  align-items: center;
+  align-items: start;
+}
+
 .image-container {
   margin-top: 1.5em;
   display: flex;
