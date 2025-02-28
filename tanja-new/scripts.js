@@ -32,57 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', onScroll);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-const klassisch = document.querySelector('.container-klassisch');
-const agil = document.querySelector('.container-agil');
-
-function checkScroll() {
-const triggerBottom = window.innerHeight / 5 * 5; // Increase the bottom trigger point
-const triggerTop = window.innerHeight / 5 * 0.5; // Decrease the top trigger point
-
-const klassischTop = klassisch.getBoundingClientRect().top;
-const agilTop = agil.getBoundingClientRect().top;
-
-if (klassischTop < triggerBottom && klassischTop > triggerTop) {
-    klassisch.classList.add('slide-in-left');
-} else {
-    klassisch.classList.remove('slide-in-left');
-}
-
-if (agilTop < triggerBottom && agilTop > triggerTop) {
-    agil.classList.add('slide-in-right');
-} else {
-    agil.classList.remove('slide-in-right');
-}
-}
-
-window.addEventListener('scroll', checkScroll);
-checkScroll(); // Initial check in case elements are already in view
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-const items = document.querySelectorAll('.fly-in');
-
-function checkScroll() {
-const triggerBottom = window.innerHeight / 5 * 4;
-
-items.forEach((item, index) => {
-    const itemTop = item.getBoundingClientRect().top;
-
-    if (itemTop < triggerBottom) {
-        setTimeout(() => {
-            item.classList.add('fly-in-visible');
-        }, index * 200); // Delay each item by 200ms
-    } else {
-        item.classList.remove('fly-in-visible');
-    }
-});
-}
-
-window.addEventListener('scroll', checkScroll);
-checkScroll(); // Initial check in case elements are already in view
-});
-
     //add active class to nav links based on current section
     document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll('.nav-link');
