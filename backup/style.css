@@ -1,0 +1,96 @@
+body {
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.8vw;
+    line-height: 1.2em;
+    letter-spacing: 0.06em;
+  }
+
+
+  a, a:active, a:visited {
+    text-decoration: underline;
+    color: orangered;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: orangered;
+
+  }
+
+  .tanja {
+    line-height: 1.1em;
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    font-size: 5vw;
+    color: orangered;
+    text-align: center;
+  }
+
+  .intro {
+    font-size: 3vw;
+    line-height: 1.1em;
+    color: orangered;
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+
+  #gif {
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+
+  .indent {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
+  .list {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 10vw;
+    color: black;
+    list-style-type: none;
+  }
+
+  .list li:before {
+    content: '\2014';
+    position: absolute;
+    margin-left: -20px;
+  }
+
+  #aboutme {
+    margin-top: 3vw;
+    margin-bottom: 10vw;
+    color: black;
+  }
+
+  .title {
+    font-size: 5vw;
+    line-height: 1em;
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  #footer {
+    color: orangered;
+    margin-bottom: 8vw;
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    body {
+      font-size: 16px;
+    }
+
+    .indent {
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
+  }
