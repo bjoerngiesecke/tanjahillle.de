@@ -75,7 +75,7 @@ b {
 
 section {
   padding-top: 4%;
-  padding-bottom: 4%;
+  padding-bottom: 3%;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -374,7 +374,10 @@ button {
 }
 
 .link-easy {
+  word-spacing: 0em !important;
   text-decoration: underline;
+  text-decoration-thickness: 1px; /* Dicke der Unterstreichung */
+  text-underline-offset: 3px; /* Abstand zur Schrift */
   color: inherit;
 }
 
