@@ -524,10 +524,6 @@ hr {
     max-width: 80%;
   }
 
-  .buchcover-small {
-    display: none;
-  }
-
   .buch-text {
     font-size: 1.2em;
   }
@@ -545,8 +541,8 @@ hr {
     width: 90%;
   }
 
-  .title {
-    font-size: 12vw;
+  .title-overlay {
+    font-size: 1.6em;
   }
 
   .subtitle {
@@ -599,14 +595,12 @@ hr {
     text-align: center;
   }
 
-  .raum-container {
-    gap: 1%;
-    padding: 2% 0% 2% 0%;
+  .leistung-text p{
+    padding: 0% 5% 2% 5%;
   }
 
-  .container-agil, .container-klassisch {
-    padding: 2%;
-    font-size: 0.8em;
+  .panel p {
+    font-size: 1.6em;
   }
 
   .section {
