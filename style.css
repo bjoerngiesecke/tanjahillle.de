@@ -118,7 +118,6 @@ section {
 
 .imprint {
   background-color: rgb(235, 235, 235, 0.8);
-  font-family: 'Times New Roman', Times, serif;
   font-size: 1.2em;
   text-align: left;
   padding: 0vw 20vw 6vw 20vw;
@@ -582,7 +581,7 @@ hr {
 
   .buch-text {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .leistung-text p{
