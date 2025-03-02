@@ -110,14 +110,6 @@ section {
   padding: 0% 20% 2% 20%;
 }
 
-.accordion-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-}
-
 .imprint-footer {
   font-size: 0.8em;
   text-align: center;
@@ -213,10 +205,6 @@ hr {
   border: 0;
   border-top: 1px solid #000;
 }
-
-/* #intro {
-  background-color: #E9E1FB;
-} */
 
 /* #buch {
   background-color: blanchedalmond;
@@ -482,12 +470,6 @@ hr {
 }
 
 /* Mobile responsive styling */
-/* Mobile responsive styling */
-/* Mobile responsive styling */
-/* Mobile responsive styling */
-/* Mobile responsive styling */
-/* Mobile responsive styling */
-/* Mobile responsive styling */
 
 @media (max-width: 768px) {
   body {
@@ -498,6 +480,10 @@ hr {
     font-size: 1.2em;
   }
 
+  .portrait {
+    background-image: url('img/Tanja-2199-mobile.png'); /* Hintergrundbild */
+  }
+
   section {
     padding-top: 20%; /* 22% was working */
     padding-bottom: 2%;
@@ -505,6 +491,10 @@ hr {
 
   h2 {
     padding-bottom: 11%;
+  }
+
+  h3 {
+    padding-top: 10%;
   }
 
   #home {
@@ -519,17 +509,16 @@ hr {
     padding-top: 10%;
   }
 
-  .buchcover {
-    min-width: 60%;
-    max-width: 80%;
-  }
-
-  .buch-text {
-    font-size: 1.2em;
+  .buchcover-small {
+    max-width: 50%;
   }
 
   ul {
     margin: 0% 5% 0% 5%;
+  }
+
+  .accordion-container {
+    padding-top: 5%;
   }
 
   .accordion {
@@ -537,8 +526,8 @@ hr {
     width: 96%;
   }
 
-  .panel {
-    width: 90%;
+  .panel p {
+    font-size: 1em;
   }
 
   .title-overlay {
@@ -593,14 +582,11 @@ hr {
 
   .buch-text {
     text-align: center;
+    font-size: 1.2em;
   }
 
   .leistung-text p{
     padding: 0% 5% 2% 5%;
-  }
-
-  .panel p {
-    font-size: 1.6em;
   }
 
   .section {
