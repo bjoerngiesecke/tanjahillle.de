@@ -77,12 +77,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 }});
 
-// testing here
+// Profile: Image Stack Animation
 const imageStack = document.getElementById('imageStack');
+const imageCounter = document.getElementById('imageCounter');
 let isHovering = false;
+let currentIndex = 0; // Start bei Bild 0
+let totalImages = imageStack.children.length;
 
 function randomAngle() {
-  return (Math.random() - 0.5) * 20; // -10 to +10 degrees
+  return (Math.random() - 0.5) * 20; // -10 bis +10 Grad
 }
 
 function applyRandomRotations() {
@@ -105,24 +108,33 @@ function resetRotations() {
 function bringTopImageToBack() {
   const first = imageStack.children[0];
   imageStack.appendChild(first);
-
-  // Recalculate z-index only
   const images = Array.from(imageStack.children);
   images.forEach((img, i) => {
     img.style.zIndex = images.length - i;
   });
+  updateImageCounter();
 }
 
+function updateImageCounter() {
+  currentIndex = (currentIndex + 1) % totalImages;
+  imageCounter.textContent = `(${(currentIndex + 1)}/${totalImages})`;
+}
+
+// Mouse enters: einmal rotieren
 imageStack.addEventListener('mouseenter', () => {
-  isHovering = true;
-  applyRandomRotations();
+  if (!isHovering) {
+    isHovering = true;
+    applyRandomRotations();
+  }
 });
 
+// Mouse leaves: Reset
 imageStack.addEventListener('mouseleave', () => {
   isHovering = false;
   resetRotations();
 });
 
+// Klick → Bild nach hinten und Counter aktualisieren
 imageStack.addEventListener('click', () => {
   if (isHovering) {
     bringTopImageToBack();
