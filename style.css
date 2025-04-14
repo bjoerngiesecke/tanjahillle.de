@@ -307,25 +307,14 @@ button {
   gap: 20px; /* Space between images */
 }
 
-.profile img {
-  aspect-ratio: 3 / 4;
-  width: 100%;
-  max-width: 20vw; /* Adjust as needed for responsive scaling */
-  border-radius: 15px; /* Adjust border-radius as needed */
-  object-fit: cover;
-  height: auto;
-  display: block;
-  margin: 1em auto; /* Center the image */
-}
-
-.profile img:hover {
-  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-}
-
 .profile {
-  flex: 1;
-  text-align: left;
+  /* flex: 1;
+  text-align: left; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  margin: 1% 0% 3% 0%;
 }
 
 .profile p {
@@ -466,6 +455,36 @@ hr {
   background-color: orangered;
   border-radius: 4px;
   transition: background-color 1s ease;
+}
+
+/* ####### testing here ###### */
+
+.image-stack {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* or any size you want */
+  aspect-ratio: 4 / 3; /* or remove if you want fixed height below */
+  margin: auto;
+  overflow: visible; /* important: allow rotated images to peek out */
+  cursor: pointer;
+}
+
+.image-stack img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 0.5s ease;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
 /* Mobile responsive styling */

@@ -76,3 +76,55 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 }});
+
+// testing here
+const imageStack = document.getElementById('imageStack');
+let isHovering = false;
+
+function randomAngle() {
+  return (Math.random() - 0.5) * 20; // -10 to +10 degrees
+}
+
+function applyRandomRotations() {
+  const images = Array.from(imageStack.children);
+  images.forEach((img, i) => {
+    const angle = randomAngle();
+    img.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+    img.style.zIndex = images.length - i;
+  });
+}
+
+function resetRotations() {
+  const images = Array.from(imageStack.children);
+  images.forEach((img, i) => {
+    img.style.transform = `translate(-50%, -50%) rotate(0deg)`;
+    img.style.zIndex = images.length - i;
+  });
+}
+
+function bringTopImageToBack() {
+  const first = imageStack.children[0];
+  imageStack.appendChild(first);
+
+  // Recalculate z-index only
+  const images = Array.from(imageStack.children);
+  images.forEach((img, i) => {
+    img.style.zIndex = images.length - i;
+  });
+}
+
+imageStack.addEventListener('mouseenter', () => {
+  isHovering = true;
+  applyRandomRotations();
+});
+
+imageStack.addEventListener('mouseleave', () => {
+  isHovering = false;
+  resetRotations();
+});
+
+imageStack.addEventListener('click', () => {
+  if (isHovering) {
+    bringTopImageToBack();
+  }
+});
