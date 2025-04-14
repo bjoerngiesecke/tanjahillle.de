@@ -81,37 +81,42 @@ document.addEventListener('DOMContentLoaded', function() {
 const imageStack = document.getElementById('imageStack');
 const imageCounter = document.getElementById('imageCounter');
 let isHovering = false;
-let currentIndex = 0; // Start bei Bild 0
+let currentIndex = 0;
 let totalImages = imageStack.children.length;
 
 function randomAngle() {
   return (Math.random() - 0.5) * 20; // -10 bis +10 Grad
 }
 
-function applyRandomRotations() {
+function applyZIndices() {
   const images = Array.from(imageStack.children);
   images.forEach((img, i) => {
+    img.style.zIndex = totalImages - i; // Top image has highest z-index
+  });
+}
+
+function applyRandomRotations() {
+  const images = Array.from(imageStack.children);
+  images.forEach((img) => {
     const angle = randomAngle();
     img.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-    img.style.zIndex = images.length - i;
   });
+  applyZIndices();
 }
 
 function resetRotations() {
   const images = Array.from(imageStack.children);
-  images.forEach((img, i) => {
+  images.forEach((img) => {
     img.style.transform = `translate(-50%, -50%) rotate(0deg)`;
-    img.style.zIndex = images.length - i;
   });
+  applyZIndices();
 }
 
 function bringTopImageToBack() {
-  const first = imageStack.children[0];
-  imageStack.appendChild(first);
   const images = Array.from(imageStack.children);
-  images.forEach((img, i) => {
-    img.style.zIndex = images.length - i;
-  });
+  const topImage = images[0];
+  imageStack.appendChild(topImage);
+  applyZIndices();
   updateImageCounter();
 }
 
@@ -140,3 +145,6 @@ imageStack.addEventListener('click', () => {
     bringTopImageToBack();
   }
 });
+
+// ✅ Fix: Set initial stack order so first image is on top
+applyZIndices();
