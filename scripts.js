@@ -1,12 +1,3 @@
-const acc = document.querySelectorAll(".accordion");
-acc.forEach(button => {
-  button.addEventListener("click", function() {
-    this.classList.toggle("active");
-    const panel = this.nextElementSibling;
-    panel.style.display = panel.style.display === "block" ? "none" : "block";
-  });
-});
-
 document.addEventListener('DOMContentLoaded', function() {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -76,6 +67,28 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 }});
+
+// Reference Toggle
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggles = document.querySelectorAll('.reference-toggle');
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.closest('.reference-wrap').querySelector('.reference-content');
+      const isOpen = content.classList.contains('open');
+
+      if (!isOpen) {
+        content.classList.add('open');
+        const scrollHeight = content.scrollHeight + 'px';
+        content.style.height = scrollHeight;
+      } else {
+        content.style.height = '0px';
+        content.classList.remove('open');
+      }
+    });
+  });
+});
 
 // Profile: Image Stack Animation
 const imageStack = document.getElementById('imageStack');

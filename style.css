@@ -20,7 +20,8 @@ body {
     overflow-x: hidden;
     /* color: #7b68ee; */
     color: #2A0E69;
-    background-color: rgb(235, 235, 235, 0.8);
+    /* background-color: rgb(235, 235, 235, 0.8); */
+    background-color: white;
 }
 
 b {
@@ -209,88 +210,79 @@ hr {
   border-top: 1px solid #000;
 }
 
-/* #buch {
-  background-color: blanchedalmond;
-} */
+/* – – – – Leistungen REFERENZEN – – – – */
 
-/* #about {
-  background-color: #ebebeb;
-} */
+.reference-section {
+  max-width: 50%;
+  margin: 0 auto;
+  /* border: 1px solid orangered; */
+  border: 2px solid rgb(235, 235, 235, 0.8);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-/* #imprint {
-  background-color: #ff0;
-} */
-
-.zitat {
-  font-family: forma-djr-display, sans-serif;
-  font-size: 3vw;
-  letter-spacing: 0.05em;
-  text-decoration: none;
+.reference-header {
   text-align: center;
-  padding: 4% 18% 8% 18%;
+  font-size: 0.7em;
+  border-bottom: 2px solid rgb(235, 235, 235, 0.8);
 }
 
-/* – – – – Akkordeon – – – – */
-
-button {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 100%;
-  background-clip: initial;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  color: #2A0E69 !important; /* Original color */
-}
-
-/* Center container with flexbox */
-.accordion-container {
+.reference-group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 0;
 }
 
-/* Adjusted accordion styling */
-.accordion {
-  cursor: pointer;
-  width: auto;
-  text-align: center;
-  border: none;
-  outline: none;
-  transition: background-color, border-radius 0.2s ease;
-  border-radius: 30px; /* Rounded corners */
-  margin-bottom: 10px; /* Space between buttons */
+.reference-title {
   font-family: forma-djr-display, sans-serif;
-  font-weight: 500;
-  font-size: 1.6vw;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  background-color: white;
-  padding: 10px 20px;
+  padding: 10px 10px 10px 24px;
 }
 
-.accordion:hover {
-  border-radius: 18px 18px 0px 0px;
-  /* box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3); */
+.reference-toggle {
+  all: unset; /* Reset all styles */
+  background: none;
+  /* border: none; */
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.reference-content {
+  height: 0;
+  font-size: 0.7em;
+  padding: 0 24px;
+  overflow: hidden;
+  transition: height 0.2s ease;
+  border-bottom: 2px solid rgb(235, 235, 235, 0.8);
+}
+
+.reference-content p {
+  all: unset;
+  padding-bottom: 20px;
+}
+
+.reference-section:hover {
+  border: 2px solid rgb(220, 220, 220, 1);
   transition: all 0.2s ease;
 }
 
-.accordion.active {
-  margin-bottom: 0px;
-  border-radius: 15px 15px 0px 0px;
+.reference-section:hover .reference-header {
+  border-bottom: 2px solid rgb(220, 220, 220, 1);
 }
 
-.panel {
-  display: none;
-  overflow: hidden;
-  margin: 0 auto; /* Center the panel */
-  margin-bottom: 10px; /* Space between panels */
+.reference-section:hover .reference-content {
+  border-bottom: 2px solid rgb(220, 220, 220, 1);
 }
 
-.panel p {
-  margin: 15px 0; /* Adjust paragraph margin */
-  font-size: 1.6vw;
+/* Remove the bottom border from the last one */
+.reference-wrap:last-child .reference-content {
+  border-bottom: none;
+}
+
+.reference-content.open {
+  height: auto; /* Allow content to expand */
 }
 
 /* – – – – Über Mich START – – – – */
@@ -317,7 +309,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0f0f0;
   margin: 3% 0% 3% 0%;
 }
 
@@ -326,21 +317,20 @@ button {
 }
 
 .links {
-    background-clip: initial;
-    -webkit-background-clip: initial;
-    -webkit-text-fill-color: initial;
-    color: orangered !important; /* Original color */
-    background-color: white !important;
-    font-family: forma-djr-display, sans-serif;
+    color: orangered;
+    /* background-color: white; */
+    background-color: rgb(235, 235, 235, 0.4);
     font-size: 1.5vw;
     letter-spacing: 0.06em;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 30px;
+    /* border: 2px solid rgb(235, 235, 235); */
 }
 
 .links:hover {
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4); /* Drop shadow on hover */
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
+    /* border: 2px solid #2A0E69; */
     transition: all 0.2s ease;
 }
 
@@ -411,7 +401,7 @@ hr {
   .fixed-nav a {
     text-decoration: none;
     color: orangered;
-    background-color: white;
+    background-color: rgb(235, 235, 235, 0.8);
     padding: 10px 20px;
     border-radius: 30px;
     transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
@@ -551,30 +541,12 @@ hr {
     margin: 0% 5% 0% 5%;
   }
 
-  .accordion-container {
-    padding-top: 5%;
-  }
-
-  .accordion {
-    font-size: 1.2em;
-    width: 96%;
-  }
-
-  .panel p {
-    font-size: 1em;
-  }
-
   .title-overlay {
     font-size: 1.6em;
   }
 
   .subtitle {
     font-size: 4vw;
-  }
-
-  .zitat {
-    font-size: 5vw;
-    padding: 0% 5% 0% 5%;
   }
 
   .section-text {
