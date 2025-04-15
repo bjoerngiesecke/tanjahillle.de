@@ -148,6 +148,10 @@ h3 {
   color: orangered;
 }
 
+.highlight-color {
+  color: orangered;
+}
+
 #home {
   /* background-color: #E9E1FB; */
   padding: 0% 0% 0% 0% !important;
