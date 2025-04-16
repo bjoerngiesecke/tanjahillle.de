@@ -554,6 +554,10 @@ hr {
     padding-right: 5%;
   }
 
+  .reference-section {
+    max-width: 90%;
+  }
+
   .links {
     font-size: 1em;
   }
