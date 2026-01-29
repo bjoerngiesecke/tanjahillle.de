@@ -9,12 +9,21 @@ html {
   overflow-x: hidden;
 }
 
+::selection {
+    background: rgba(255, 255, 0, 0.5);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: rgba(255, 255, 0, 0.5);
+    text-shadow: none;
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.6em;
-    letter-spacing: 0.01em;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.005em;
     overflow-x: hidden;
     /* color: #7b68ee; */
     color: #2A0E69;
@@ -34,7 +43,8 @@ body {
 }
 
 .title-overlay {
-  font-size: 3vw;
+  font-size: 1.5vw;
+  letter-spacing: normal;
   /* color: #2E294E; */
   color: #2A0E69;
   text-align: center;
@@ -95,7 +105,7 @@ section {
 .imprint-footer {
   font-size: 0.8em;
   text-align: center;
-  padding: 2% 0% 2% 0%;
+  padding: 2% 0% 1.5% 0%;
 }
 
 .imprint {
@@ -116,6 +126,7 @@ h2 {
   font-weight: 500;
   font-size: 3.5em;
   line-height: 1em;
+  letter-spacing: 0.02em;
   text-align: center;
   padding: 8% 10% 7% 10%;
   color: orangered;
@@ -128,7 +139,7 @@ h2 {
 h3 { 
   font-weight: 400;
   text-align: center;
-  padding: 4% 0% 2% 0%;
+  padding: 5% 0% 2% 0%;
   color: orangered;
 }
 
@@ -268,7 +279,8 @@ hr {
 }
 
 .reference-wrap:hover .reference-title:hover {
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.5);
+  transition: all 0.2s ease;
 }
 
 /* – – – – Über Mich START – – – – */
@@ -319,8 +331,8 @@ hr {
     transition: all 0.2s ease;
 }
 
-.links-spacer {
-  margin-top: 3vw;
+.kontakt {
+  padding: 3% 0% 3% 0%;
   text-align: center;
 }
 
@@ -441,7 +453,7 @@ hr {
 .image-stack {
   position: relative;
   width: 100%;
-  max-width: 600px; /* or any size you want */
+  max-width: 800px; /* or any size you want */
   aspect-ratio: 4 / 3; /* or remove if you want fixed height below */
   margin: auto;
   overflow: visible; /* important: allow rotated images to peek out */
