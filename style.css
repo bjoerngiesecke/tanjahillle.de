@@ -11,7 +11,9 @@ html {
 
 body {
     font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 1.6em;
+    letter-spacing: 0.01em;
     letter-spacing: 0.01em;
     overflow-x: hidden;
     /* color: #7b68ee; */
@@ -21,6 +23,9 @@ body {
 }
 
 .portrait {
+  position: relative;
+  height: 100vh;
+  background-image: url('img/Tanja-2199.png');
   position: relative;
   height: 100vh;
   background-image: url('img/Tanja-2199.png');
@@ -41,6 +46,7 @@ body {
   
   .buch-info {
       flex: 1;
+      text-align: center;
       text-align: center;
 }
   
@@ -113,6 +119,8 @@ h2 {
   text-align: center;
   padding: 8% 10% 7% 10%;
   color: orangered;
+  overflow-wrap: break-word;
+  hyphens: auto;
   overflow-wrap: break-word;
   hyphens: auto;
 }
