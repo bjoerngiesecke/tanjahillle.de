@@ -133,11 +133,11 @@ sub {
 h2 {
   font-family: forma-djr-display, sans-serif;
   font-weight: 500;
-  font-size: 2.5em;
+  font-size: 3.5em;
   line-height: 1em;
   letter-spacing: 0.05em;
   text-align: center;
-  padding: 6% 10% 5% 10%;
+  padding: 8% 10% 7% 10%;
   color: orangered;
 }
 
@@ -283,6 +283,10 @@ hr {
 
 .reference-content.open {
   height: auto; /* Allow content to expand */
+}
+
+.reference-wrap:hover .reference-title:hover {
+  background-color: yellow;
 }
 
 /* – – – – Über Mich START – – – – */
