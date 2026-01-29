@@ -10,13 +10,9 @@ html {
 }
 
 body {
-    font-family: forma-djr-display, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 1.6em;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    word-spacing: 0.035em;
-    /* letter-spacing: 0.08rem; */
-    /* word-spacing: 10%; */
+    letter-spacing: 0.01em;
     overflow-x: hidden;
     /* color: #7b68ee; */
     color: #2A0E69;
@@ -24,21 +20,15 @@ body {
     background-color: white;
 }
 
-b {
-  letter-spacing: 0.075em;
-}
-
 .portrait {
-  position: relative; /* Hält das Bild als Hintergrund */
-  height: 100vh; /* Volle Bildschirmhöhe */
-  background-image: url('img/Tanja-2199.png'); /* Hintergrundbild */
+  position: relative;
+  height: 100vh;
+  background-image: url('img/Tanja-2199.png');
   background-size: cover;
   background-position: center;
 }
 
 .title-overlay {
-  font-family: forma-djr-display, sans-serif;
-  font-weight: 500;
   font-size: 3vw;
   /* color: #2E294E; */
   color: #2A0E69;
@@ -51,7 +41,7 @@ b {
   
   .buch-info {
       flex: 1;
-      text-align: center; /* Center the image horizontally */
+      text-align: center;
 }
   
   .buchcover {
@@ -66,12 +56,9 @@ b {
 }
 
 .subtitle {
-  font-family: forma-djr-display, sans-serif;
-  font-weight: 500;
   font-size: 2.2vw;
   color: #2A0E69;
   line-height: 1.1em;
-  letter-spacing: 0.05em;
   text-align: center;
 }
 
@@ -87,18 +74,6 @@ section {
   padding-left: 20%;
   padding-right: 20%;
   color: #2A0E69;
-}
-
-.leistung-titel {
-  font-family: forma-djr-display, sans-serif;
-  font-weight: 500;
-  font-size: 2.2vw;
-  color: #2A0E69;
-  line-height: 3em;
-  letter-spacing: 0.05em;
-  text-align: center;
-  padding-bottom: 0.5%;
-  padding-top: 1%;
 }
 
 .leistung-text {
@@ -135,15 +110,15 @@ h2 {
   font-weight: 500;
   font-size: 3.5em;
   line-height: 1em;
-  letter-spacing: 0.05em;
   text-align: center;
   padding: 8% 10% 7% 10%;
   color: orangered;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
-h3 {  
-  font-weight: 500;
-  /* font-size: 1.5em; */
+h3 { 
+  font-weight: 400;
   text-align: center;
   padding: 4% 0% 2% 0%;
   color: orangered;
@@ -235,7 +210,6 @@ hr {
 }
 
 .reference-title {
-  font-family: forma-djr-display, sans-serif;
   padding: 10px 10px 10px 24px;
 }
 
@@ -325,7 +299,6 @@ hr {
     /* background-color: white; */
     background-color: rgb(235, 235, 235, 0.4);
     font-size: 1.5vw;
-    letter-spacing: 0.06em;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 30px;
@@ -367,8 +340,6 @@ hr {
   text-align: center;
   font-size: 1.6em;
   margin-bottom: 20px;
-  font-family: forma-djr-display, sans-serif;
-  letter-spacing: 0.02em;
 }
 
 .section {
@@ -384,16 +355,13 @@ hr {
 /* – – – – Navigation – – – – */
 
   .fixed-nav {
-    font-family: forma-djr-display, sans-serif;
-    font-weight: 500;
     font-size: 1.5vw;
-    letter-spacing: 0.05em;
     position: fixed;
     top: 1%;
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 2px;
+    gap: 5px;
     padding: 10px;
     z-index: 1000;
     background-clip: initial;
