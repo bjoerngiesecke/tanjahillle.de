@@ -68,24 +68,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 }});
 
-// Reference Toggle
+// Referenzen Toggle
 
-document.addEventListener('DOMContentLoaded', () => {
-  const toggles = document.querySelectorAll('.reference-toggle');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggles = document.querySelectorAll(".reference-toggle");
 
   toggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const content = toggle.closest('.reference-wrap').querySelector('.reference-content');
-      const isOpen = content.classList.contains('open');
-
-      if (!isOpen) {
-        content.classList.add('open');
-        const scrollHeight = content.scrollHeight + 'px';
-        content.style.height = scrollHeight;
-      } else {
-        content.style.height = '0px';
-        content.classList.remove('open');
-      }
+    toggle.addEventListener("click", () => {
+      const wrap = toggle.closest(".reference-wrap");
+      wrap.classList.toggle("open");
     });
   });
 });

@@ -196,86 +196,116 @@ h3 {
 hr {
   margin: 10px 0;
   border: 0;
-  border-top: 1px solid #000;
+  border-top: 1px solid #2A0E69;
 }
 
 /* – – – – Leistungen REFERENZEN – – – – */
 
+/* – – – – Leistungen REFERENZEN – – – – */
+
+/* – – – – Basis Layout – – – – */
+/* – – – – Leistungen REFERENZEN – – – – */
+
+/* – – – – Leistungen REFERENZEN – – – – */
+
 .reference-section {
-  max-width: 50%;
+  max-width: 60%;
   margin: 0 auto;
-  /* border: 1px solid orangered; */
-  border: 2px solid rgb(235, 235, 235, 0.8);
-  border-radius: 16px;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .reference-header {
+  font-size: 0.75em;
   text-align: center;
-  font-size: 0.7em;
-  border-bottom: 2px solid rgb(235, 235, 235, 0.8);
 }
 
-.reference-group {
-  display: flex;
-  flex-direction: column;
+.reference-wrap {
+  border-bottom: 1px solid #2A0E69;
 }
 
-.reference-title {
-  padding: 10px 10px 10px 24px;
-}
-
-.reference-toggle {
-  all: unset; /* Reset all styles */
-  background: none;
-  /* border: none; */
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-
-.reference-content {
-  height: 0;
-  font-size: 0.7em;
-  padding: 0 24px;
-  overflow: hidden;
-  transition: height 0.2s ease;
-  border-bottom: 2px solid rgb(235, 235, 235, 0.8);
-}
-
-.reference-content p {
-  all: unset;
-  padding-bottom: 20px;
-}
-
-.reference-section:hover {
-  border: 2px solid rgb(220, 220, 220, 1);
-  transition: all 0.2s ease;
-}
-
-.reference-section:hover .reference-header {
-  border-bottom: 2px solid rgb(220, 220, 220, 1);
-}
-
-.reference-section:hover .reference-content {
-  border-bottom: 2px solid rgb(220, 220, 220, 1);
-}
-
-/* Remove the bottom border from the last one */
-.reference-wrap:last-child .reference-content {
+.reference-wrap:last-child {
   border-bottom: none;
 }
 
-.reference-content.open {
-  height: auto; /* Allow content to expand */
+.reference-title {
+  padding: 0;
 }
 
-.reference-wrap:hover .reference-title:hover {
-  background-color: rgba(255, 255, 0, 0.5);
-  transition: all 0.2s ease;
+/* DER BUTTON: Jetzt als Flexbox, um den Punkt und Text auszurichten */
+.reference-toggle {
+  all: unset;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  
+  padding: 15px 10px 15px 0px;
+
+  color: #2A0E69;
+  
+  user-select: none;
+  -webkit-user-select: none;
+
+  /* Transition für Padding, Farbe UND das Pseudo-Element */
+  transition: 
+    padding 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), 
+    color 0.1s ease;
+}
+
+/* DER PUNKT (Pseudo-Element) */
+.reference-toggle::before {
+  content: "";
+  display: inline-block;
+  width: 10px;        /* Größe des Punktes */
+  height: 10px;
+  margin-right: 15px; /* Abstand zum Text */
+  background-color: #2A0E69; /* Startfarbe des Punktes */
+  border-radius: 50%; /* Macht ihn rund */
+  flex-shrink: 0;     /* Verhindert, dass der Punkt gequetscht wird */
+  
+  /* Sanfter Farbübergang für den Punkt */
+  transition: background-color 0.1s ease, transform 0.2s ease;
+}
+
+.reference-wrap:hover .reference-toggle,
+.reference-wrap.open .reference-toggle {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: orangered;
+}
+
+/* Spezifische Farbe für den Punkt im Hover/Open-Zustand */
+.reference-wrap:hover .reference-toggle::before,
+.reference-wrap.open .reference-toggle::before {
+  background-color: orangered;
+  transform: scale(1.2);
+}
+
+/* – – – – Inhalt (unverändert) – – – – */
+.reference-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 0.75em;
+  transition: grid-template-rows 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.1s ease;
+}
+
+.reference-wrap.open .reference-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.reference-content-inner {
+  min-height: 0;
+  /* Kleiner Trick: Den Text etwas einrücken, damit er unter dem Titel-Text 
+     startet und nicht unter dem Punkt */
+  padding-left: 25px; 
+}
+
+.reference-content-inner p {
+  margin: 0;
+  padding: 0 10px 30px 0px;
 }
 
 /* – – – – Über Mich START – – – – */
