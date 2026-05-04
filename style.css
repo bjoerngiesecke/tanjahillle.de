@@ -374,10 +374,10 @@ hr {
 
 /* – – – – Zusammenarbeit – – – – */
 
-.Logos {
+.logos {
   display: block;
   margin: 20px auto;
-  max-width: 50%;
+  max-width: 90%;
   height: auto;
 }
 
@@ -644,7 +644,7 @@ hr {
   .logos {
   display: block;  
   margin: 20px auto;
-  max-width: 80%;
+  max-width: 90%;
   height: auto;
 }
 
